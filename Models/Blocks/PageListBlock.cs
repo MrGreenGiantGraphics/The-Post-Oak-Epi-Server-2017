@@ -8,6 +8,7 @@ using EPiServer.Filters;
 namespace Landrys.ThePostOak_EpiServer.Models.Blocks
 {
     [ContentType(
+        GroupName = Global.GroupNames.Standard,
         DisplayName = "PageListBlock-Template", 
         GUID = "04a5ca23-c735-4faa-8a36-7454876330a0", 
         Description = "Post Oak PageListBlock")]

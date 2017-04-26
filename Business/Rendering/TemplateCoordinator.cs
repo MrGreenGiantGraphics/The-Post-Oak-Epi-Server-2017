@@ -60,6 +60,22 @@ namespace Landrys.ThePostOak_EpiServer.Business.Rendering
                 Path = BlockPath("FooterBlockWide.cshtml")
             });
 
+            viewTemplateModelRegistrator.Add(typeof(HeadBlock), new TemplateModel
+            {
+                Name = "HeadBlockWide",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("HeadBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(lightboxBlock), new TemplateModel
+            {
+                Name = "lightboxBlockWide",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("lightboxBlockWide.cshtml")
+            });
+
             viewTemplateModelRegistrator.Add(typeof(KindImageBlock), new TemplateModel
             {
                 Name = "KindBlockWide",
@@ -68,12 +84,68 @@ namespace Landrys.ThePostOak_EpiServer.Business.Rendering
                 Path = BlockPath("KindBlockWide.cshtml")
             });
 
+            viewTemplateModelRegistrator.Add(typeof(EditorialBlock), new TemplateModel
+            {
+                Name = "EditorialBlockWide",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("EditorialBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(SubHeaderBlock), new TemplateModel
+            {
+                Name = "SubHeaderBlockWide",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("SubHeaderBlockWide.cshtml")
+            });
+
             viewTemplateModelRegistrator.Add(typeof(GenericImageBlock), new TemplateModel
             {
                 Name = "ImageBlockWide",
                 Tags = new[] { Global.ContentAreaTags.OneThirdWidth, Global.ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = BlockPath("ImageBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(ContentImageBlock), new TemplateModel
+            {
+                Name = "ContentImageBlockWide",
+                Tags = new[] { Global.ContentAreaTags.OneFourthWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("ContentImageBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(TabBlock), new TemplateModel
+            {
+                Name = "TabBlockWide",
+                Tags = new[] { Global.ContentAreaTags.HalfWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("TabBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(SliderBlock), new TemplateModel
+            {
+                Name = "SliderBlockWide.cshtml",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("SliderBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(DevVideoBlock), new TemplateModel
+            {
+                Name = "DevVidBlockWide.cshtml",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("DevVidBlockWide.cshtml")
+            });
+
+            viewTemplateModelRegistrator.Add(typeof(MainContentBlock), new TemplateModel
+            {
+                Name = "MainContentBlockWide.cshtml",
+                Tags = new[] { Global.ContentAreaTags.FullWidth, Global.ContentAreaTags.FullWidth },
+                AvailableWithoutTag = false,
+                Path = BlockPath("MainContentBlockWide.cshtml")
             });
 
             viewTemplateModelRegistrator.Add(typeof(SitePageData), new TemplateModel

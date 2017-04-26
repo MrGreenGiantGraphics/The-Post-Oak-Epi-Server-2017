@@ -29,10 +29,6 @@ namespace Landrys.ThePostOak_EpiServer.Models.Pages
         [Display(Order = 15)]
         public virtual XhtmlString TextPoNav { get; set; }
 
-        [Display(Order = 20)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImagePoTop { get; set; }
-
         [Display(Order = 25)]
         public virtual XhtmlString ContentHolder01 { get; set; }
 
@@ -45,58 +41,14 @@ namespace Landrys.ThePostOak_EpiServer.Models.Pages
         [Display(Order = 40)]
         public virtual XhtmlString ContentHolder04 { get; set; }
 
-        [Display(Order = 45)]
-        public virtual XhtmlString ContentHolder05 { get; set; }
-
-        [Display(Order = 46)]
-        public virtual XhtmlString ContentHolder06 { get; set; }
-
-        [Display(Order = 47)]
-        public virtual XhtmlString ContentHolder07 { get; set; }
-
-        [Display(Order = 48)]
-        public virtual XhtmlString ContentHolder08 { get; set; }
-
-        [Display(Order = 50)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom01 { get; set; }
-
-        [Display(Order = 55)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom02 { get; set; }
-
-        [Display(Order = 60)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom03 { get; set; }
-
-        [Display(Order = 65)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom04 { get; set; }
-
-        [Display(Order = 70)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom05 { get; set; }
-
-        [Display(Order = 75)]
-        [UIHint(UIHint.Image)]
-        public virtual ContentReference ImageBottom06 { get; set; }
-
-        [Display(Order = 150)]
-        public virtual XhtmlString MainBodyContent { get; set; }
-
-        [Display(GroupName = SystemTabNames.Content, 
-                 Order = 200)]
-        [CultureSpecific]
-        public virtual ContentArea MainContentPost { get; set; }
-
-        [CultureSpecific]
-        public virtual ContentArea ImageAreaHolder01 { get; set; }
-
-        [CultureSpecific]
-        public virtual ContentArea ImageAreaHolder02 { get; set; }
-
         [CultureSpecific]
         public virtual ContentArea MainContentKind { get; set; }
+
+        [CultureSpecific]
+        public virtual ContentArea MainContentDev { get; set; }
+
+        [CultureSpecific]
+        public virtual ContentArea lightBoxHolder { get; set; }
 
         [Display(GroupName = Global.GroupNames.SiteSettings, Order = 400)]
         public virtual LinkItemCollection ProductPageLinks { get; set; }

@@ -9,6 +9,7 @@ using EPiServer;
 namespace Landrys.ThePostOak_EpiServer.Models.Blocks
 {
     [ContentType(
+        GroupName = Global.GroupNames.Standard,
         DisplayName = "ContactBlock-Template", 
         GUID = "c47cbe5c-178f-4507-9563-1a2bb900184c", 
         Description = "Post Oak Contact Block Template")]

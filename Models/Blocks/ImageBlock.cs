@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -8,9 +9,9 @@ using EPiServer.Web;
 namespace Landrys.ThePostOak_EpiServer.Models.Blocks
 {
     [ContentType(
-        GroupName = Global.GroupNames.Specialized,
-        DisplayName = "Image-Block-Template",
-        GUID = "84d3ea65-1deb-461e-a8f3-734a22ca9bf0",
+        GroupName = Global.GroupNames.Standard,
+        DisplayName = "ImageBlock",
+        GUID = "90ac4c37-906a-44ea-ab52-eb2294274f1a",
         Description = "Use this block to create site images")]
     [SiteImageUrl(Global.StaticGraphicsFolderPath + "Standard.png")]
     public class ImageBlock : BlockData

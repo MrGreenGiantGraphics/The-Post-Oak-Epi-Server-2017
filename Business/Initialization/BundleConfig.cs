@@ -42,7 +42,7 @@ namespace Landrys.ThePostOak_EpiServer.Business.Initialization
                    .Include("~/Static/css/clean-blog.min.css")
                    .Include("~/Static/css/lightbox.css")
                    .Include("~/Static/css/map.css")
-                   .Include("~/Static/css/styles.css"));
+                   .Include("~/Static/css/style.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

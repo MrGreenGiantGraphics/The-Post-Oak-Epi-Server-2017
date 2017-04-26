@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
@@ -9,6 +8,7 @@ using EPiServer;
 namespace Landrys.ThePostOak_EpiServer.Models.Blocks
 {
     [ContentType(
+        GroupName = Global.GroupNames.Standard,
         DisplayName = "JumbotronBlock-Template", 
         GUID = "8b133b50-7482-4f5a-984c-37d664926f63", 
         Description = "Post Oak Jumbotron Block")]

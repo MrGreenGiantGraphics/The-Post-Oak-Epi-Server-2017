@@ -8,9 +8,9 @@ using EPiServer.Web;
 namespace Landrys.ThePostOak_EpiServer.Models.Blocks
 {
     [ContentType(
-        GroupName = Global.GroupNames.Specialized,
-        DisplayName = "Generic-Image-Block",
-        GUID = "47c58bb2-c2bd-4714-a1c5-2fea1b97ad03",
+        GroupName = Global.GroupNames.Standard,
+        DisplayName = "GenericImageBlock",
+        GUID = "56c3e2c2-6e38-42dd-b794-53c492a49388",
         Description = "Use this block to create Geneic image blocks")]
     [SiteImageUrl(Global.StaticGraphicsFolderPath + "Standard.png")]
     public class GenericImageBlock : BlockData

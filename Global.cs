@@ -27,6 +27,9 @@ namespace Landrys.ThePostOak_EpiServer
             [Display(Name = "Specialized", Order = 6)]
             public const string Specialized = "Specialized";
 
+            [Display(Name = "Customized", Order = 7)]
+            public const string Customized = "Customized";
+
         }
         /// <summary>
         /// Tags to use for the main widths used in the Bootstrap HTML framework
@@ -37,6 +40,7 @@ namespace Landrys.ThePostOak_EpiServer
             public const string TwoThirdsWidth = "span8";
             public const string HalfWidth = "span6";
             public const string OneThirdWidth = "span4";
+            public const string OneFourthWidth = "span3";
             public const string NoRenderer = "norenderer";
         }
 
@@ -49,6 +53,7 @@ namespace Landrys.ThePostOak_EpiServer
             public const int TwoThirdsWidth = 8;
             public const int HalfWidth = 6;
             public const int OneThirdWidth = 4;
+            public const int OneFourthWidth = 3;
         }
 
         public static Dictionary<string, int> ContentAreaTagWidths = new Dictionary<string, int>
@@ -56,7 +61,8 @@ namespace Landrys.ThePostOak_EpiServer
                 { ContentAreaTags.FullWidth, ContentAreaWidths.FullWidth },
                 { ContentAreaTags.TwoThirdsWidth, ContentAreaWidths.TwoThirdsWidth },
                 { ContentAreaTags.HalfWidth, ContentAreaWidths.HalfWidth },
-                { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth }
+                { ContentAreaTags.OneThirdWidth, ContentAreaWidths.OneThirdWidth },
+                { ContentAreaTags.OneFourthWidth, ContentAreaWidths.OneFourthWidth }
             };
 
         /// <summary>

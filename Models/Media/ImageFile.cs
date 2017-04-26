@@ -17,7 +17,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Media
 
         [Display(Name = "Main Hero Image",
         GroupName = SystemTabNames.Content,
-        Order = 20)]
+        Order = 10)]
         [UIHint(UIHint.Image)]
         public virtual ContentReference MainHeroImage { get; set; }
 
@@ -27,7 +27,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Media
               Name = "Copyright Info",
               Description = "Please enter legal content",
               GroupName = SystemTabNames.Content,
-              Order = 1)]
+              Order = 20)]
         public virtual string Copyright { get; set; }
 
         [CultureSpecific]
@@ -36,7 +36,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Media
             Name = "Alternate Text input",
             Description = "Please enter ADA Information",
             GroupName = SystemTabNames.Content,
-            Order = 2)]
+            Order = 30)]
         public virtual string AlternateText { get; set; }
 
 
@@ -46,7 +46,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Media
             Name = "Alternate Description",
             Description = "Please enter Image description.",
             GroupName = SystemTabNames.Content,
-            Order = 3)]
+            Order = 40)]
         public virtual string Description { get; set; }
 
         [CultureSpecific]
@@ -55,7 +55,7 @@ namespace Landrys.ThePostOak_EpiServer.Models.Media
             Name = "Image Title",
             Description = "Please enter Image title",
             GroupName = SystemTabNames.Content,
-            Order = 4)]
+            Order = 50)]
         public virtual string Title { get; set; }
 
     }

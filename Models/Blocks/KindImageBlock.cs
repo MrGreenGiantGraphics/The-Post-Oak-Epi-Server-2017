@@ -22,14 +22,15 @@ namespace Landrys.ThePostOak_EpiServer.Models.Blocks
          Order = 2)]
         public virtual PageReference Link { get; set; }
 
+
         [CultureSpecific]
         [Required(AllowEmptyStrings = true)]
-        [Display(Name = "Text Area",
-         Description = "Main Content",
-         GroupName = SystemTabNames.Content,
-         Order = 3)]
-        [UIHint(UIHint.LongString)]
-        public virtual string Text { get; set; }
+        [Display(
+            Name = "Main Text Area",
+            GroupName = SystemTabNames.Content,
+            Order = 4)]
+        public virtual XhtmlString TextArea { get; set; }
+
 
         [CultureSpecific]
         [Required(AllowEmptyStrings = true)]
@@ -95,5 +96,5 @@ namespace Landrys.ThePostOak_EpiServer.Models.Blocks
         [UIHint(UIHint.Textarea)]
         public virtual string Desc { get; set; }
 
-   }
+    }
 }
