@@ -1,0 +1,60 @@
+﻿@using Landrys.ThePostOak_EpiServer
+@using EPiServer.Framework.Web.Mvc.Html
+@model PageViewModel<Landrys.ThePostOak_EpiServer.Models.Pages.MainSubPage>
+@{ Layout = "~/Views/Shared/Layouts/_Layout.cshtml"; }
+<div id="epi-scaler_sub">
+    <div id="child" class="subpage-container">
+        <div class="solid-background">
+            <!-- Title -->
+            <hr class="diamond-bar-pattern" />
+            <div class="diamonds-small">
+                <section class="col-md-12">@Html.PropertyFor(x => x.CurrentPage.ContentHolder01, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</section>
+            </div>
+            <hr class="diamond-bar-pattern" />
+        </div>
+        <div class="pattern-sub">
+            <!-- Block Element Start -->
+            <section class="col-md-12">
+                @Html.PropertyFor(x => x.CurrentPage.ContentAreaSlider, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })
+            </section>
+            <!-- Block Element End -->
+        </div>
+        <div class="solid-background">
+            <!--tabbed content -->
+            <div class="diamonds-middle">
+                <hr class="diamond-bar-pattern" />
+                <section id="main-container-flex" class="">@Html.PropertyFor(x => x.CurrentPage.ContentAreaHolder, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })</section>
+                <!-- tabbed content here -->
+            </div>
+        </div>
+        <hr class="diamond-bar-pattern" />
+        <div class="pattern-sub-02 subpage-tabs-holder">
+            <!--promos -->
+            <section id="subpage-holder" class="subpage-images-01">
+                <div class="col-lg-3 col-sm-3 subpage-images-flex">
+                    <!-- Add CMS text insert here -->
+                    <figure>@Html.PropertyFor(x => x.CurrentPage.BlockImage01, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.OneFourthWidth })</figure>
+                </div>
+                <div class="col-lg-3 col-sm-3 subpage-images-flex">
+                    <!-- Add CMS text insert here -->
+                    <figure>@Html.PropertyFor(x => x.CurrentPage.BlockImage02, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.OneFourthWidth })</figure>
+                </div>
+                <div class="col-lg-3 col-sm-3 subpage-images-flex">
+                    <!-- Add CMS text insert here -->
+                    <figure>@Html.PropertyFor(x => x.CurrentPage.BlockImage03, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.OneFourthWidth })</figure>
+                </div>
+                <div class="col-lg-3 col-sm-3 subpage-images-flex">
+                    <!-- Add CMS text insert here -->
+                    <figure>@Html.PropertyFor(x => x.CurrentPage.BlockImage04, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.OneFourthWidth })</figure>
+                </div>
+            </section>
+            <!--END -->
+        </div>
+    </div>
+</div>
+<!--Hospitality bar Area-->
+<section>
+    <div>
+        @{ Html.RenderPartial("Footernavsub", Model); }
+    </div>
+</section>

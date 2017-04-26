@@ -1,0 +1,54 @@
+﻿@model IPageViewModel<SitePageData>
+<div class="main-container">
+            <ul class="list-inline weather">
+                <li>
+                    <h5>Local Temperature</h5><br />
+                    <!-- Weather -->
+                    <div id="wxWrap">
+                        <span id="wxIcon2"></span>
+                        <span id="wxTemp"></span>
+                    </div>
+                </li>
+                <li>
+                    <h5>Local Time</h5><br /><iframe src="http://free.timeanddate.com/clock/i4vgo886/n494/fn15/fs22/fc252525/tct/pct/ts1" frameborder="0" width="140" height="28" allowTransparency="true"></iframe>
+                </li>
+            </ul>
+            <p>The Post Oak is prominently located in the Galleria and Uptown area along West Loop South, with convenient access from Loop 610, Holly Hurst Street, and Hallmark Drive.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.883384760483!2d-95.45950768474162!3d29.752087981989554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c14752544173%3A0x48ef38a3d8a99418!2s1600+West+Loop+S%2C+Houston%2C+TX+77027!5e0!3m2!1sen!2sus!4v1468283673502" style="width:100%; height:25vw; min-height:180px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div><!-- container -->
+<p></p><p></p>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!--------------------------------------- Weather Functions --------------------------------------------->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+        <script type="text/javascript">
+// javascript will go here
+$(function(){
+
+    // Specify the WOEID code and units (f or c)
+    var w = '12791348'; // or e.g. SPXX0050
+    var u = 'f';
+
+    var query = "SELECT item.condition FROM weather.forecast WHERE woeid='" + w + "' AND u='" + u + "'";
+    var cacheBuster = Math.floor((new Date().getTime()) / 1200 / 1000);
+    var url = 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent(query) + '&format=json&_nocache=' + cacheBuster;
+
+    window['wxCallback'] = function(data) {
+        var info = data.query.results.channel.item.condition;
+        $('#wxIcon').css({
+            backgroundPosition: '-' + (61 * info.code) + 'px 0'
+        }).attr({
+            title: info.text
+        });
+        $('#wxIcon2').append('<img src="http://l.yimg.com/a/i/us/we/52/' + info.code + '.gif" width="34" height="34" title="' + info.text + '" />');
+        $('#wxTemp').html(info.temp + '&deg;' + (u.toUpperCase()));
+    };
+
+    $.ajax({
+        url: url,
+        dataType: 'jsonp',
+        cache: true,
+        jsonpCallback: 'wxCallback'
+    });
+});
+        </script>
+<!--------------------------------------- End Weather Functions --------------------------------------------->

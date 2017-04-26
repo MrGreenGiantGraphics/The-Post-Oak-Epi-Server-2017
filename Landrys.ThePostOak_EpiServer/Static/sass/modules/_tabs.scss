@@ -1,0 +1,228 @@
+﻿/********************Code Notes**************************
+    CSS written by David Green - dgreen@ldry.com
+    Please contact me if you have any question
+    the following code is not optimized - August 12 2016.
+************************END******************************/
+#flex-tab-holder {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px;
+    height: 300px;
+    min-height: 400px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    margin: 0 auto;
+    background-color: $color-clear;
+}
+
+#tab-menu-container {
+    position: relative;
+    top: 1em;
+    left: 0;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tabs-menu {
+    display: -webkit-inline-flex; /* Safari */
+    display: inline-flex;
+    height: auto;
+    width: auto;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.tabs-menu li {
+    height: auto;
+    margin-right: 5px;
+    background-color: #dad6d1;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+    color: #252525;
+    text-align: center;
+    font-family: BellMt;
+    font-size: 30px;
+}
+
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tabs-menu .current a {
+    color: #2e7da8;
+}
+
+.tab {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    -webkit-flex-direction: column; /* Safari */
+    flex-direction: column;
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+#tab-content-flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    background-color: $color-clear;
+}
+
+.tab-content {
+    padding: 20px;
+    display: none;
+}
+
+.tab-image-hold:nth-child(1) {
+    float: left;
+    width: 33%;
+    margin-left: 5px;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-flex: 0 1 250px;
+    -ms-flex: 0 1 250px;
+    flex: 0 1 250px;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: $color-clear;
+}
+
+.tab-content-hold:nth-child(2) {
+    float: left;
+    width: 65%;
+    margin-left: 5px;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-flex: 2 1 250px;
+    -ms-flex: 0 1 250px;
+    flex: 0 1 250px;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: $color-clear;
+}
+
+.tab-content-full:nth-child(3) {
+    float: right;
+    width: 100%;
+    clear: both;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-flex: 0 1 750px;
+    -ms-flex: 0 1 750px;
+    flex: 0 1 750px;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    background-color: $color-clear;
+}
+
+#tab-1 {
+    display: block;
+}
+// Buttons for the tab
+.tab-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.5s;
+    background-color: $color-tab-BF;
+}
+
+.tab-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.tab-btn span::after {
+    content: ">>";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.tab-btn:hover span {
+    padding-right: 25px;
+}
+
+.tab-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Responsive design for ipad */
+}
+
+@media screen and (max-width: 768px) {
+    /* Responsive design for ipad Mini */
+}
+
+@media screen and (max-width: 640px) {
+    /* Responsive design for iphone 5 */
+}
+
+@media screen and (max-width: 320px) {
+    /* Responsive design for iphone */
+}

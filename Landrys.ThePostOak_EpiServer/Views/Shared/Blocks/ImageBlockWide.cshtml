@@ -1,0 +1,20 @@
+﻿@model GenericImageBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+
+<div id="generic-block-image">
+    <section id="gen-image-01">
+        @using (Html.BeginConditionalLink(!ContentReference.IsNullOrEmpty(Model.Link) && !(ViewContext.Controller is PreviewController), Url.PageLinkUrl(Model.Link)))
+        {
+            <div class="gen-image-holder" @Html.EditAttributes(x => x.Image)>
+
+                @if (Model.Image != null)
+                {
+                    <img src="@Url.ContentUrl(Model.Image)" alt="@Model.AlternativeText" longdesc="@Model.ImageDescription" class="img-responsive">
+
+                }
+
+            </div>
+        }
+    </section>
+</div>

@@ -1,0 +1,17 @@
+﻿@model HeadBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+<section id="Hero">
+    <header id="Diamonds">
+        <div class="col-md-12">
+            <section @Html.EditAttributes(x => x.ContentPlacerHead)>@Model.ContentPlacerHead</section>
+        </div>
+        <div class="hero-content col-md-12">
+            <section @Html.EditAttributes(x => x.ContentPlacerMiddle)>@Model.ContentPlacerMiddle </section>
+        </div>
+        <div class="hero-scroll col-md-12">
+            <section @Html.EditAttributes(x => x.ContentPlacerFooter)>@Model.ContentPlacerFooter </section>
+        </div>
+    </header>
+    <hr class="hr-bar" />
+</section>

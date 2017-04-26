@@ -1,0 +1,30 @@
+﻿@using Landrys.ThePostOak_EpiServer
+@using EPiServer.Framework.Web.Mvc.Html
+@model PageViewModel<Landrys.ThePostOak_EpiServer.Models.Pages.SubmitFormPage>
+@{ Layout = "~/Views/Shared/Layouts/_LayoutSubmit.cshtml"; }
+<div id="child">
+    <div class="solid-bg">
+        <!-- Title -->
+        <div class="diamonds-small">
+            <hr class="diamond-bar-pattern" />
+            <section class="subpage-title col-md-12">@Html.PropertyFor(x => x.CurrentPage.ContentHolderTop, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</section>
+        </div>
+        <hr class="diamond-bar-pattern" />
+    </div>
+    <div class="solid-bg main">
+        <!--tabbed content Area -->
+        <div class="diamonds-md">
+            <!-- content holder Block -->
+            <section>@Html.PropertyFor(x => x.CurrentPage.ContentAreaHolder, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth, EditContainerClass = "overflow-hidden" })</section>
+            <!-- content holder Block end -->
+            <script src="~/Static/js/postoakmap.js"></script>
+            <!-- tabbed content here -->
+        </div>
+    </div>
+</div>
+<!--Hospitality bar Area-->
+<section>
+    <div>
+        @{ Html.RenderPartial("Footernavsub", Model); }
+    </div>
+</section>

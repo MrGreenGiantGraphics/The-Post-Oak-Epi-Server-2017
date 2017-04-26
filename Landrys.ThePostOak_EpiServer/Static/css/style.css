@@ -1,0 +1,990 @@
+﻿@font-face {
+  font-family: 'BellMt';
+  src: url('../fonts/Bell MT Italic.eot'); 
+  src: url('../fonts/Bell MT Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Bell MT Italic.woff2') format('woff2'), 
+       url('../fonts/Bell MT Italic.woff') format('woff'),
+       url('../fonts/Bell MT Italic.ttf')  format('truetype'),
+       url('../fonts/Bell MT Italic.svg') format('svg'),
+       url('../fonts/Bell MT Italic.otf') format('opentype');
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: -10px 0 10px 0;
+  color: #fff;
+  line-height:normal;
+  font-family:Arial, sans-serif;
+}
+/*-----------------------------------START container backgrounds-------------------------*/
+#hero {
+    width:100%;
+    min-height:800px;
+    margin:0px;
+    padding:0px;
+    background:url("../img/home/hero-1.jpg") center center no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+.diamonds {
+    width:100%;
+    height:100%;
+    min-height:800px;
+    margin:0px;
+    padding:0px;
+    background:url("../img/home/diamonds.png") center center no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+.pattern {
+    width:100%;
+    height:100%;
+    max-height:1000px;
+    margin:0px;
+    padding:160px 0px;
+    background:url("/Static/img/patterned-bg.png") center center no-repeat;
+    background-size:cover;
+}
+#child .pattern {
+    height:auto;
+    max-height:none;
+    background-size:100% auto;
+    padding:50px 0px;
+}
+.pattern2 {
+    width:100%;
+    margin:0px;
+    padding:50px 0px 70px;
+    background:url("/Static/img/backgrounds/patterned-bg-2.jpg") left top no-repeat;
+    background-size:100% 100%;
+}
+.home-3 {
+    width:100%;
+    min-height:800px;
+    margin:0px;
+    background:url("../img/home/entry.jpg") center center no-repeat;
+    background-size:cover;
+}
+.overlay {
+    width:100%;
+    height:100%;
+    min-height:800px;
+    margin:0px;
+    padding:50px 0px;
+    background-color:rgba(0, 0, 0, 0.5);
+    background-size:cover;
+}
+@media screen and (max-width: 1172px) {
+    .home-3 {
+        min-height:initial;
+        height:auto;
+    }
+    .overlay {
+        min-height:initial;
+        height:auto;
+    }
+}
+@media screen and (max-width: 702px) {
+    .overlay {
+        padding:30px 0px;
+    }
+}
+.full-width-block {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+#sophisticated-content {
+    width:100%; 
+    min-height:900px;
+    margin:0px;
+    padding:90px 10px 10px 60px;
+    background:url("../img/conference-entry.jpg") center center no-repeat;
+    background-size:cover;
+}
+.content-box-horz {
+    width: 750px;
+    margin: 0px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.content-border {
+    width:100%;
+    height:100%;
+    border:#898989 solid 1px;
+    padding:0 20px 20px;
+}
+@media screen and (max-width: 870px) {
+    #sophisticated-content {
+        min-height:initial;
+        padding:90px 10px 150px 10px;
+    }
+    .content-box-horz {
+        width:100%;
+        max-width:750px;
+        margin:auto;
+    }
+}
+.solid-bg {
+	background-color:#efece6;
+}
+.diamonds-sm {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    background:url("/Static/img/backgrounds/diamonds-sm.png") left top no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+.diamonds-md {
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    background:url("/Static/img/backgrounds/diamonds-md.png") repeat-y left top;
+}
+.two-col {
+width:100%;
+max-width:550px;
+margin:0 auto;
+padding:40px 0;
+}
+.two-col:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+/*-----------------------------------END container backgrounds-------------------------
+/*-----------------------------------START navigation-------------------------*/
+
+header #top-nav-bar {
+    margin:0 auto;
+}
+
+#top-nav-bar ul {
+    padding: 0px;
+    margin: 0px auto 175px;
+    max-width: 977px;
+    width: 100%;
+}
+#top-nav-bar ul li {
+    display:inline;
+    text-align:center;
+    padding:13px 14px;
+    text-transform:uppercase;
+    color:#FFF;
+    font-size:22px;
+}
+@media screen and (max-width: 1009px) {
+	#top-nav-bar ul {
+		max-width:911px;
+	}
+	#top-nav-bar ul li {
+		padding:11px 12px;
+		font-size:21px;
+	}
+}
+@media screen and (max-width: 943px) {
+	#top-nav-bar ul {
+		max-width:846px;
+	}
+	#top-nav-bar ul li {
+		padding:9px 10px;
+		font-size:20px;
+	}
+}
+#top-nav-bar ul li a {
+	text-decoration:none;
+}
+#top-nav-bar ul li:hover {
+    background-color:#acacac;
+}
+/*-----------------------------------END navigation-------------------------*/
+/*-----------------------------------START font styles-------------------------*/
+h2 {
+    text-transform:uppercase;
+    text-align:center;
+    color:#FFF;
+    font-family: "bebas-neue";
+    font-size:94px;
+	font-weight:normal;
+    margin-bottom:10px;
+}
+.diamonds h2 {
+    font-size:70px !important;
+}
+@media screen and (max-width: 999px) {
+	.diamonds h2 {
+		font-size:65px !important;
+	}
+}
+@media screen and (max-width: 933px) {
+	.diamonds h2 {
+		font-size:55px !important;
+	}
+}
+.pattern h2 {
+    color:#000;
+    margin-bottom:15px;
+}
+#child h2 {
+	color:#252525;
+}
+.home-3 h2 {
+	margin:15px auto 50px;
+}
+@media screen and (max-width: 933px) {
+	.home-3 h2 {
+		margin:15px auto 15px;
+	}
+}
+@media screen and (max-width: 546px) {
+    .content-box-horz h2 {
+        font-size: 84px;
+    }
+}
+@media screen and (max-width: 499px) {
+    .content-box-horz h2 {
+        font-size: 70px;
+    }
+}
+h3 {
+    color:#000;
+    text-transform:uppercase;
+    text-align:center;
+    font-family: "bebas-neue";
+    font-size:77px !important;
+	font-weight:normal;
+    margin-bottom:0px;
+}
+h4 {
+    color:#000;
+    text-align:center;
+    font-family:BellMt;
+    font-style:italic;
+    font-size:30px;
+	font-weight:normal;
+}
+h5 {
+    color:#000;
+    text-align:center;
+    font-family: "bebas-neue";
+    font-size:30px;
+	font-weight:normal;
+}
+h6 {
+    color:#FFF;
+    text-align:left;
+    font-size:58px;
+    font-family: "bebas-neue";
+	font-weight:normal;
+}
+.gallery h6 {
+    font-size:4.05vw;
+}
+hgroup {
+    background-color:#d6cfc7;
+    color:#252525;
+    width:100%;
+    padding:0 8px;
+    margin-bottom:10px;
+    line-height:43px !important;
+    font-family:"bebas-neue";
+    font-size:25px;
+	font-weight:normal;
+}
+p {
+    margin:14px auto;
+    max-width:800px;  
+    text-align:center;
+    font-size:18px;
+    font-weight:200;
+	font-family:Arial, sans-serif;
+}
+.gallery p {
+    font-size:1.26vw;
+}
+@media screen and (max-width: 702px) {
+    .gallery p {
+        font-size:18px;
+    }
+    .gallery h6 {
+        font-size:58px;
+    }
+}
+@media screen and (max-width: 487px) {
+    .gallery p {
+        font-size:14px;
+    }
+    .gallery h6 {
+        /*font-size:51px;*/
+        font-size:10.5vw;
+    }
+}
+.pattern p {
+    color:#000 !important;
+    text-align:center;
+    line-height:40px;
+    margin-bottom:80px;
+}
+.home-3 p {
+    max-width:680px;
+}
+@media screen and (max-width: 712px) {
+	.home-3 p {
+		padding:14px 5px;
+	}
+	p {
+		padding-left:5px;
+		padding-right:5px;
+	}
+}
+footer {
+	color:#acacac;
+}
+footer p {
+	color:#acacac;
+}
+#child {
+	color:#252525;
+}
+#child p {
+	color:#252525;
+}
+small{
+    font-size:9px;
+}
+a  {
+    color:inherit;
+}
+a:hover  {
+    color:inherit;
+    text-decoration:none;
+}
+.content-box-horz h2, .content-box-horz p {
+    text-align:left;
+}
+.content-box-horz h2 {
+    margin:0 0 20px 0;
+}
+/*-----------------------------------END font styles-------------------------*/
+/*-----------------------------------START list formats-------------------------*/
+.plain-list {
+	list-style-type:none;
+    margin:0;
+	padding:0;
+}
+.plain-list li {
+	padding:12px 0;
+	font-size:13px;
+}
+.plain-list li a {
+	text-decoration:none;
+}
+/*-----------------------------------END list formats-------------------------*/
+/*-----------------------------------START HR-------------------------*/
+.hr-bar {
+    margin:0px;
+    width:100%;
+    border: 0;
+    border-top: 15px solid #acacac;
+}
+.hr-solid {
+    height: 3px;
+    width:100%;
+    max-width:600px;
+    border: 0;
+    border-top: 2px solid #000;
+    margin-bottom:50px;
+}
+.hr-diamonds {
+    height:27px;
+    width:100%;
+    max-width:600px;
+    border: 0;
+    background:url("../img/hr-diamond.png") center center no-repeat;
+	background-size:600px 27px;
+}
+.diamond-bar {
+	background:url("/Static/img/diamond-bar.png") repeat-x;
+    margin:0px;
+    width:100%;
+    border: 0;
+	height:20px;
+}
+/*-----------------------------------END HR-------------------------*/
+/*-----------------------------------START buttons-------------------------*/
+
+
+#top-home-01 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    margin: 0 0 0 0;
+
+}
+
+#top-home-02 {
+    position: relative;
+    top: 102px;
+    left: 0px;
+    display: block;
+}
+.scroll {
+    position: relative;
+    top: 330px;
+    left: 0px;
+    display: block;
+    margin: 0 0 0 0;
+    width:100%;
+    font-style:italic;
+    margin:auto;
+    text-align:center;    
+}
+.scroll img {
+    width:40px;
+    margin:auto;
+}
+.bttn {
+    margin: 8px;
+    border: 0px;
+    border-radius: initial;
+    padding: 14px 15px;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.bttn:hover {
+    color: #FFF;
+}
+.bg-light{
+    background-color:#acacac;
+}
+.bg-dark {
+    background-color:#252525;
+}
+/*-----------------------------------END buttons-------------------------*/
+/*-----------------------------------START 5 feature thumbs-------------------------*/
+/*#catagories {
+	width:100%;
+	max-width:1316px;
+	margin:240px auto 20px;
+}
+#catagories figure {
+	display:inline;
+	margin:10px 35px;
+}
+#catagories figure img {
+	width:100%;
+	max-width:180px;
+	border:#c7c7c7 5px solid;
+}
+@media screen and (max-width: 1372px) {
+	#catagories figure {
+		margin:10px 20px;
+	}
+	#catagories {
+		max-width:1116px;
+	}
+}
+@media screen and (max-width: 1172px) {
+	#catagories figure img {
+		max-width:150px;
+	}
+	#catagories {
+		max-width:966px;
+	    margin:190px auto 20px;
+	}
+}
+@media screen and (max-width: 1022px) {
+	#catagories figure img {
+		max-width:140px;
+	}
+	figure {
+		margin:10px 13px !important;
+	}
+	#catagories {
+		max-width:846px;
+	}
+}
+@media screen and (max-width: 902px) {
+	#catagories figure img {
+		max-width:120px;
+	}
+	figure {
+		margin:10px 8px !important;
+	}
+	#catagories {
+		max-width:696px;
+	}
+}
+@media screen and (max-width: 752px) {
+	figure {
+		margin:10px 3px !important;
+	}
+	#catagories {
+		max-width:646px;
+	    margin:120px auto 20px;
+	}
+}
+@media screen and (max-width: 702px) {
+    #catagories figure {
+	    display:block;
+	    margin:10px 10px;
+    }
+	#catagories figure img {
+		width:180px !important;
+		max-width:180px !important;
+	}
+	#catagories {
+		max-width:180px;
+	    margin:50px auto 0px;
+	}
+}*/
+/*-----------------------------------END 5 feature thumbs-------------------------*/
+
+/*-----------------------------------START Floats-------------------------*/
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.right section {
+    display:inline;
+}
+/*-----------------------------------END floats-------------------------*/
+/*-----------------------------------Videos-------------------------*/
+.videos {
+    position:relative;
+	height:100%;
+	max-height:520px;
+	width:100%; 
+	padding:50px 0 60px;
+}
+.videos:after {
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.videos p {
+    color:#000 !important;
+	max-width:450px;
+}
+.videos .left, .videos .right {
+	width:50%;
+}
+.videos .right {
+    position:relative;
+}
+@media screen and (max-width:1018px) {
+    .videos .left, .videos .right {
+	    width:100%;
+    }
+    .videos .right {
+        max-width:700px;
+        margin:auto;
+    }
+}
+.videos .left {
+	margin:90px 0;
+}
+#bot-image-05 img {
+    z-index:1;
+}
+#bot-image-05 img, #bot-image-06 img {
+	width:100%;
+	max-width:298px;
+}
+.videos .right #bot-image-06 img {
+	position:absolute;
+	top:14.5px;
+	left:287px;
+	z-index:-1;
+}
+.right .overlay1 {
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:2;
+	width:100%;
+	max-width:298px;
+}
+.right .overlay2 {
+	position:absolute;
+	top:14.5px;
+	left:287px;
+    z-index:0;
+	width:100%;
+	max-width:298px;
+}
+@media screen and (max-width: 1209px) {
+    #bot-image-05 img, #bot-image-06 img {
+	    max-width:250px;
+    }
+    #bot-image-05 img {
+        left:85px;
+    }
+    .videos .right #bot-image-06 img {
+	    left:239px;
+    }
+    .right .overlay1 {
+	    max-width:250px;
+    }
+    .right .overlay2 {
+	    left:239px;
+	    max-width:250px;
+    }
+}
+@media screen and (min-device-width: 1018px) and (max-device-width: 1107px) {
+    .videos h3 {
+        font-size:60px !important;
+        margin-top:0;
+    }
+    .videos p {
+        font-size:16px;
+        padding-bottom:10px;
+    }
+}
+/*-----------------------------------End videos-------------------------*/
+
+/*-----------------------------------------CHILD TEMPLATE--------------------------------------------------------*/
+/*-----------------------------------child header-------------------------*/
+#child header {
+	background-color:#252525;
+	padding-bottom:45px;
+}
+
+/*-----------------------------------End child header-------------------------*/
+/*-----------------------------------child main content-------------------------*/
+/*.main p {
+	text-align:left;
+}
+.main img {
+	width:100%;
+	max-width:500px;
+}*/
+/*-----------------------------------START Tabbed content-------------------------*/
+ul.tabs {
+	margin:0 auto;
+	width:471px;
+	padding:0;
+	list-style:none;
+}
+ul.tabs li {
+	background:#dad6d1;
+	color:#252525;
+	text-align:center;
+	font-family:BellMt; 
+	font-size:30px;
+	display:inline-block;
+	padding:10px 0;
+	width:155px;
+	cursor:pointer;
+}
+ul.tabs li.current {
+	background:#d6cfc7;
+	color:#252525;
+}
+.tab-content {
+	display:none;
+	padding:15px 0;
+}
+.tab-content p {
+	position:relative;
+	top:-25px;
+}
+.tab-content.current {
+	display:inherit;
+	border-top:solid 5px #d6cfc7; 
+	border-bottom:solid 1px #d6cfc7;
+	min-height:400px;
+}
+.tab-content.current:before {
+	content:"";
+	display:block;
+	position:relative;
+	left:0;
+	top:-12px;
+	width:100%;
+	height:1px;
+	background:#d6cfc7;
+}
+/*-----------------------------------END TABBED CONTENT-------------------------*/
+/*-----------------------------------END child main content-------------------------*/
+/*-----------------------------------START promotions section-------------------------*/
+.promos {
+	width:100%;
+	max-width:940px;
+	margin:0 auto;
+    list-style-type:none;
+}
+.promos li {
+	width:300px;
+    text-align:center;
+	float:left;
+}
+.promos img {
+	width:100%;
+	max-width:180px;
+	border:#c7c7c7 5px solid;
+}
+.promos p {
+    font-family:BellMt;
+    font-style:italic;
+	padding:10px 0 25px;
+}
+/*-----------------------------------end child-------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+/*Post Oak Block Area START*/
+#block-image-footer {
+    position: relative;
+    top:0px; left:0px;
+    float: left;
+    display: block;
+    width: 33%;
+    height: 550px;
+    background-color: transparent;
+}
+#about-us-header {
+    position: relative;
+    top: 3px;
+    left: -23px;
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 6.0em;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+#block-image-01 {
+    position: relative;
+    top: 0; left:0px;
+    display: block;
+    width: 85%;
+    height: auto;
+    background-color: transparent;
+}
+.mediaImg {
+    position: relative;
+    top: 10px; left: 40px;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+.mediaText {
+    position: relative;
+    top: 50px; left: 40px;
+    display: block;
+    width: 85%;
+    height: auto;
+    background-color: transparent;
+}
+#about-us-01 {
+    position: relative;
+    top:0px; left:0px;
+    float: left;
+    display: block;
+    width: 49%;
+    height: auto;
+}
+#about-us-02 {
+    position: relative;
+    top: 10px; left: 30px;
+    float: left;
+    display: block;
+    width: 50%;
+    height: auto;
+}
+#about-us-03 {
+    position: relative;
+    top:-10px; left:0;
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#browse-header {
+    position: relative;
+    top: 3px;
+    left: 9px;
+    display: block;
+    width: 88%;
+    height: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 6.0em;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+#browse-holder {
+    position: relative;
+    top:0px; left:0px;
+    z-index: 2;
+    float: left;
+    display: block;
+    width: 90%;
+    height: auto;
+    background-color: transparent;
+}
+#browse-01 {
+    position: relative;
+    top:0px; left:0px;
+    float: left;
+    display: block;
+    width: 49%;
+    height: auto;
+    list-style: none;
+}
+#browse-01 li{
+    list-style: none;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:darkgray;
+}
+.socialicon-01 li{
+    position: relative;
+    top:0px; left:-40px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0 0 0 0;
+}
+.b-face {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    background:url("facebook.png") center center no-repeat;
+    background-size:cover;
+    width: 25px;
+    height: 25px;
+    color:darkred;
+}
+.b-twit {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background:url("twitter.png") center center no-repeat;
+    background-size:cover;
+    width: 25px;
+    height: 25px;
+}
+.b-insta {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background:url("instagram.jpg") center center no-repeat;
+    background-size:cover;
+    width: 25px;
+    height: 25px;
+}
+.b-pint {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background:url("Pintrest.png") center center no-repeat;
+    background-size:cover;
+    width: 25px;
+    height: 25px;
+}
+/*Post Oak Block Area END*/
+#fot-content-area {
+    position: relative;
+    top: 0px; left:0px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: black;
+
+}
+#fot-content-01 {
+    position: relative;
+    top:0px; left:0px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+
+}
+#fot-content-02 {
+    position: relative;
+    top: 0; left: 0px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+#fot-content-02 #footer-navbar{
+    position: relative;
+    top: 0px; left: 0px;
+    float: left;
+    background-color: transparent;
+}
+/* Code for the Layout Navagation START */
+#main-nav-header {
+    position: relative;
+    top: 0px; left: 0px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.topnav li {
+    float: left;
+}
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover {
+    background-color: #111;
+}
+
+ul.topnav li.icon {
+    display: none;
+}
+/* Code for the Layout Navagation END */

@@ -1,0 +1,21 @@
+﻿@model TabBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+<div id="tabs-container">
+    <section id="tab-menu-container">
+        <span @Html.EditAttributes(x => x.TabHeaderArea)>@Model.TabHeaderArea</span>
+    </section>
+    <div class="tab">
+        <section id="tab-content-flex">
+            <div id="tab-1" class="tab-content">
+                <span @Html.EditAttributes(x => x.TabAreaOne)>@Model.TabAreaOne</span>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <span @Html.EditAttributes(x => x.TabAreaTwo)>@Model.TabAreaTwo</span>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <span @Html.EditAttributes(x => x.TabAreaThree)>@Model.TabAreaThree</span>
+            </div>
+        </section>
+    </div>
+</div>

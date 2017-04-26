@@ -1,0 +1,9 @@
+﻿@model MainContentBlock
+<div class="solid-bg main">
+    <div class="diamonds-md">
+        <hr class="diamond-bar" />
+        <div class="main-container clearfix" @Html.EditAttributes(c => c.MainContent)>
+        @Html.DisplayFor(c => Model.MainContent)
+        </div>
+    </div>
+</div>

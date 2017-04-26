@@ -1,0 +1,320 @@
+﻿
+/* Code for the Layout Navagation START */
+
+@import "compass/css3";
+
+/* Code for the Layout Logo START */
+
+.main-nav-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.nh-resort {
+    background-color: #252525;
+    z-index: 1;
+}
+
+.nh-meetings {
+    background-color: blue;
+    z-index: 2;
+}
+
+.nh-home {
+    background-color: transparent;
+    z-index: 3;
+}
+
+
+
+.main-nav-header .master-logo {
+    margin: auto;
+    padding: 20px 0 50px;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Code for the Responsive Menu START */
+
+.menu-container {
+    width: 100%;
+    min-width: 1010px;
+    background-color: transparent;
+    margin: 0 0 0 -2%;
+}
+
+    .menu-container .menu-item {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        margin: 0;
+        min-width: 1010px;
+        background-color: transparent;
+    }
+
+.menu-item ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item li {
+    display: -webkit-flex;
+    display: flex;
+    margin: 2px;
+    padding: 3px 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5em;
+    font-family: "bebas-neue",sans-serif;
+    background-color: transparent;
+}
+
+    .menu-item li a {
+        display: -webkit-flex;
+        display: flex;
+        color: white;
+        text-decoration: none;
+        padding: 13px 14px;
+        transition: 0.4s;
+    }
+
+    .menu-item li:last-of-type a {
+        border-bottom: none;
+    }
+
+    .menu-item li a:hover, a:focus {
+        color: #FFF;
+        background-color: #acacac;
+    }
+
+/* Code for the hospitality bar START */
+
+#hospitality-bar {
+    width: 100%;
+    min-width: 1200px;
+    height: auto;
+    background-color: #252525;
+}
+
+#fot-hospitality-01 {
+    background-color: #252525;
+}
+
+
+.logo-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    background-color: #252525;
+}
+
+.logo-container {
+    list-style-type: none;
+    margin: 0 0 0 110px;
+    padding: 20px 30px;
+}
+
+.logo-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 65px;
+    margin: 10px;
+}
+
+/* Code for the hospitality bar END */
+
+/* Code for the subpage section START */
+
+.subpage-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.subpage-title {
+    margin: 4px;
+    padding: 5px;
+    height: auto;
+    flex: 0 1 100%;
+    order: 1;
+    background-color: transparent;
+}
+
+.subpage-carousel {
+    margin: 4px;
+    padding: 5px;
+    height: auto;
+    flex: 0 1 100%;
+    order: 2;
+    background-color: transparent;
+}
+
+.subpage-tabs {
+    margin: 4px;
+    padding: 5px;
+    height: auto;
+    flex: 0 1 100%;
+    order: 3;
+    background-color: transparent;
+}
+
+#subpage-tabs-holder {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.subpage-images-01 {
+    display: -webkit-row;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 5px;
+    -webkit-flex: row;
+    flex: row;
+    order: 3;
+}
+
+.subpage-images-flex {
+    width: 100%;
+    height: auto;
+    margin: 0 0 0 20px;
+    background-color: transparent;
+}
+
+.su-image-01 {
+    display: block;
+    margin: 0 0 0 134px;
+}
+
+.su-text-01 {
+    position: relative;
+    top: -86px;
+    left: 163px;
+    display: block;
+    width: 112px;
+    height: 35px;
+    margin: 80px 0 0 0;
+    padding: 10px;
+    color: white;
+    background-color: black;
+}
+
+/* Code for the subpage section END */
+
+
+/* @ Media Responsive text START */
+
+
+@media all and (max-width: 800px) {
+    .menu-container .menu-item {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .menu-container .menu-item {
+        flex-direction: column;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .logo-container {
+        flex-direction: column;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        padding: 15px;
+        height: auto;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .subpage-container .subpage-images-01 {
+        flex-direction: column;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        padding: 15px;
+        height: auto;
+        /* webkit */
+        -webkit-animation-property: -webkit-width;
+        -webkit-transition-duration: 0.5s;
+        /* firefox */
+        -moz-animation-property: -webkit-width;
+        -moz-transition-duration: 0.5s;
+        /* opera */
+        -o-animation-property: -webkit-width;
+        -o-transition-duration: 0.5s;
+    }
+
+    .subpage-images-flex {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        padding: 10px;
+        background-color: transparent;
+    }
+
+    .su-image-01 {
+        display: block;
+        margin: 0 0 0 -30px;
+    }
+
+    .su-text-01 {
+        position: relative;
+        top: -86px;
+        left: -10px;
+    }
+
+    .su-text-02 {
+    display: block;
+    width: 227%;
+    position: relative;
+    top: -7px;
+    left: -95px;
+    }
+}
+
+/* @ Media Responsive text END */
+
+
+

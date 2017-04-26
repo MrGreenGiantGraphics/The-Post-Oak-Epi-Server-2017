@@ -1,0 +1,52 @@
+﻿@model ContentImageBlock
+<hr class="diamond-bar" />
+<div class="pattern2">
+    <!--promos -->
+    <ul class="promos">
+        <li>
+            <section>
+                @if (Model.ImageA != null)
+                {
+                    <a href="@Model.ImageALink"><img src="@Url.ContentUrl(Model.ImageA)" alt="@Model.AlternativeTextA" class="img-circle img-responsive"></a>
+                }
+                <br />
+                <div @Html.EditAttributes(x => x.TextEditA)>@Model.TextEditA</div>
+                <div><a class="btn bg-dark" href="@Model.ButtonLinkA" @Html.EditAttributes(m => m.ButtonTextA)>@Model.ButtonTextA</a></div>
+            </section>
+        </li>
+        <li id="mastrospromo">
+            <section>
+                @if (Model.ImageB != null)
+                {
+                    <a href="@Model.ImageBLink"><img src="@Url.ContentUrl(Model.ImageB)" alt="@Model.AlternativeTextB" class="img-circle img-responsive"></a>
+                }
+                <br />
+                <div @Html.EditAttributes(x => x.TextEditB)>@Model.TextEditB</div>
+                <div><a class="btn bg-dark" href="@Model.ButtonLinkB" @Html.EditAttributes(m => m.ButtonTextB)>@Model.ButtonTextB</a></div>
+            </section>
+        </li>
+        <li>
+            <section>
+                @if (Model.ImageC != null)
+                {
+                    <a href="@Model.ImageCLink"><img src="@Url.ContentUrl(Model.ImageC)" alt="@Model.AlternativeTextC" class="img-circle img-responsive"></a>
+                }
+                <br />
+                <div @Html.EditAttributes(x => x.TextEditC)>@Model.TextEditC</div>
+                <div><a class="btn bg-dark" href="@Model.ButtonLinkC" @Html.EditAttributes(m => m.ButtonTextC)>@Model.ButtonTextC</a></div>
+            </section>
+        </li>
+        <li>
+            <section>
+                @if (Model.ImageD != null)
+                {
+                    <a href="@Model.ImageDLink"><img src="@Url.ContentUrl(Model.ImageD)" alt="@Model.AlternativeTextD" class="img-circle img-responsive"></a>
+                }
+                <br />
+                <div @Html.EditAttributes(x => x.TextEditD)>@Model.TextEditD</div>
+                <span><a class="btn bg-dark" href="@Model.ButtonLinkD" @Html.EditAttributes(m => m.ButtonTextD)>@Model.ButtonTextD</a></span>
+            </section>
+        </li>
+    </ul>
+    <span class="clearfix"></span>
+</div>

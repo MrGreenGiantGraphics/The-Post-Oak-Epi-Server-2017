@@ -1,0 +1,209 @@
+﻿<div class="main-container">
+                <p><center>Fill out the form below to send a message and we will get back to you within 24 hours!</center></p>
+                <!------------------------------------------------------------------------------------------------->
+                <%
+                function GetPath()
+                query_string = request.ServerVariables("QUERY_STRING")
+                if query_string <> "" then
+                query_string = "?" & query_string
+                end if
+                GetPath = "http://" & request.ServerVariables("SERVER_NAME") & request.ServerVariables("URL") & query_string
+                end function
+                %>
+
+                <%
+                Dim UserIPAddress
+                UserIPAddress = Request.ServerVariables("HTTP_X_FORWARDED_FOR")
+                If UserIPAddress = "" Then
+                UserIPAddress = Request.ServerVariables("REMOTE_ADDR")
+                End If
+                %>
+
+                <%
+                if request.form("submitted") = "yes" then
+
+                'set testMode: 1 = test mode, 0 = production
+                dim testMode
+                testMode = 0
+
+                m_sRedirect = Request.Form("redirectURL")
+                m_sEmail = Request.Form("email")
+                m_sSpam = Request.Form("SPAM-EMAIL")
+
+                'Start email
+                dim objCDO
+                dim objCDOSYScon
+                set objCDOSYSMail = Server.CreateObject("CDO.Message")
+
+                'Set From: Check if email address was given. If not use default email address and set do not reply notice
+                if m_sEmail = "" OR instr(m_sEmail,"@") <= 0 OR instr(m_sEmail,".") <= 0 then
+                fromEmail = "do-not-reply@ldry.com"
+                noReply = " - DO NOT REPLY VIA EMAIL TO THIS REQUEST"
+                noReply2 = "***** DO NOT REPLY VIA EMAIL TO THIS REQUEST *****"
+                else
+                fromEmail = m_sEmail
+                end if
+
+                'Current Bcc addresses
+                dim ToBcc
+                ToBcc =""
+
+                if testMode = 1 then
+                objCDOSYSMail.Configuration.Fields.Item _
+                ("http://schemas.microsoft.com/cdo/configuration/sendusing")=2
+                'Name or IP of remote SMTP server
+                objCDOSYSMail.Configuration.Fields.Item _
+                ("http://schemas.microsoft.com/cdo/configuration/smtpserver")="CORP-WEBTEST03.ldry.com"
+                'Server port
+                objCDOSYSMail.Configuration.Fields.Item _
+                ("http://schemas.microsoft.com/cdo/configuration/smtpserverport")=25
+                objCDOSYSMail.Configuration.Fields.Update
+                end if
+
+                dim myBody
+                myBody = "
+                <html>
+                <body bgcolor=#ffffff style="" font-family arial,helvetica,sans-serif;"">
+                    "
+                    myBody = myBody & "<h1>E-mail Signup</h1>"
+                    myBody = myBody & "<h3>An information request was submitted from the " & request.form("conceptWebsite") & "</h3>"
+                    myBody = myBody & "<hr />"
+                    myBody = myBody & "<br />First Name: " & request.form("contact")
+                    myBody = myBody & "<br />Last Name: " & request.form("contactlast")
+                    myBody = myBody & "<br />Street Address: " & request.form("address")
+                    myBody = myBody & "<br />City: " & request.form("city")
+                    myBody = myBody & "<br />State: " & request.form("state")
+                    myBody = myBody & "<br />Postal/Zip Code: " & request.form("zip")
+                    myBody = myBody & "<br />E-Mail: " & request.form("email")
+                    myBody = myBody & "<br />Interests: " & request.form("interests")
+                    myBody = myBody & "<hr /><p>This information is tied to fishbowl and should be regularly checked for confirmation. Thank you.</p>"
+                    myBody = myBody & "<p>
+                        This request was submitted from the form on the following page: <a href=" & GetPath & " target="" _blank"">" & GetPath & "</a>"
+
+                        if m_sSpam = "" then
+                        else
+                        myBody = myBody & "<br /><br /><hr />
+                    <p>Hidden field value:" & m_sSpam & "</p>"
+                    myBody = myBody & "<p>IP Address:" & UserIPAddress & "</p>"
+                    end if
+
+                    myBody = myBody & "<br /><br /><p><strong>" & noReply2 & "&nbsp;</strong></p>
+                </body>
+            </html>"
+
+            objCDOSYSMail.From = fromEmail
+
+            if testMode = 1 then
+            if m_sSpam = "" then
+            objCDOSYSMail.To = "cring@ldry.com"
+            objCDOSYSMail.Bcc = ToBcc
+            objCDOSYSMail.Subject = "TEST: " & request.form("conceptWebsite") & " - Message from " & request.form("contact_name") & noReply
+            else
+            objCDOSYSMail.To = "jpearce@ldry.com"
+            objCDOSYSMail.Subject = "TEST -- SPAM CAUGHT -- " & request.form("conceptWebsite") & " Message from " & request.form("contact_name")
+            end if
+            else
+            if m_sSpam = "" then
+            objCDOSYSMail.To = "info@ldry.com"
+            objCDOSYSMail.Bcc = ToBcc
+            objCDOSYSMail.Subject = request.form("conceptWebsite") & " - Message from " & request.form("contact_name") & noReply
+            else
+            '			objCDOSYSMail.To = "webmaster@ldry.com"
+            '			objCDOSYSMail.Subject = "-- SPAM CAUGHT -- " & request.form("conceptWebsite") & " Event planning request from " & request.form("contact_name")
+            end if
+            end if
+
+            objCDOSYSMail.HTMLBody = myBody
+
+            'Send the email	and close out email
+            objCDOSYSMail.Send
+            Set objCDOSYSMail = Nothing
+            Set objCDOSYSCon = Nothing
+
+            dim mailed
+            mailed = "yes"
+
+            else
+
+            end if
+            %>
+
+            <% if mailed = "yes" then
+            Response.Redirect(m_sRedirect)
+            else %>
+
+            <!------------------------------------------------------ ------------------------------->
+
+            <form method="POST" name="eventPlan" id="eventPlan" action="../subscribe/" class="form-horizontal">
+                <input type="hidden" id="submitted" name="submitted" value="yes" />
+                <input type="hidden" id="conceptWebsite" name="conceptWebsite" value="The Post Oak Hotel email subscribe form" />
+                <input type="hidden" id="redirectURL" name="redirectURL" value="../success/" />
+
+                <!--<form name="sentMessage" id="contactForm" novalidate>-->
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <input type="text" class="form-control" placeholder="First Name:" name="contactF" id="contactF" required data-validation-required-message="Please enter your FIRST name.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <input type="text" class="form-control" placeholder="Last Name:" name="contactL" id="contactL" required data-validation-required-message="Please enter your LAST name.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Street Address:</label>
+                        <input type="text" class="form-control" placeholder="Street Address" maxlength="40" size="40" id="address" name="address">
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>City:</label>
+                        <input type="text" class="form-control" placeholder="City" maxlength="25" size="25" id="city" name="city">
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>State/Province:</label>
+                        <input type="text" class="form-control" placeholder="State/Province" maxlength="2" size="2" id="state" name="state">
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Postal/Zip Code:</label>
+                        <input class="form-control" placeholder="Postal/Zip Code" name="zip" type="text" id="zip" size="11" maxlength="10">
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <input type="email" class="form-control" placeholder="Email Address:" name="email" id="email" required data-validation-required-message="Please enter your email address.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 label-form-group-radio controls">
+                        <label class="specialty-feild">Interests: </label><br />
+                        <input value="Meetings" name="Meetings" type="checkbox" id="interests"> Meetings &nbsp; &nbsp; &nbsp; &nbsp;
+                        <input value="Weddings" name="Weddings" type="checkbox" id="interests"> Weddings<br />
+                        <input value="Entertainment" name="Entertainment" type="checkbox" id="interests"> Entertainment &nbsp;
+                        <input value="Events" name="Events" type="checkbox" id="interests" style="margin-left:3px;"> Special Events<br />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="g-recaptcha" data-sitekey="6LcbGSETAAAAAPIgiH_NNbb06RslemEkpluAZGDc"></div>
+                <br />
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn bg-dark">Send</button>
+                    </div>
+                </div>
+            </form>
+
+            <% end if %>
+
+</div>

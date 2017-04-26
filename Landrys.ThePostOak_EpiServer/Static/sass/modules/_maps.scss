@@ -1,0 +1,55 @@
+﻿/*-----------------------------------START directions-------------------------*/
+#mapCanvas-2 {
+	min-height: 180px;
+	height: 25vw;
+}
+#directionsPanel-2 {
+    display: block;
+    position: relative;
+    top: 2em;
+    left: 0;
+	margin:0 auto;
+	width: 1000px;
+	background: green;
+	padding: 10px 15px;
+}
+#directionSteps-2 {
+	clear: both;
+	width: 100%;
+	margin: 10px 0 0 0;
+	font-size: 11px;
+	line-height: normal;
+	overflow: auto;
+}
+#directionsPanel-2 a {
+    display: block;
+    text-decoration: none;
+    clear: both;
+}
+.directionInputs-2 label {
+    background: #acacac;
+    color: #FFF;
+    padding: 2px 8px;
+    text-align: center;
+    font-size: 14px;
+    margin-right: 10px;
+}
+.directionInputs-2 input {
+    width: 234px;
+    height: 39px;
+    border: 1px solid #acacac;
+    font-size: 15px;
+}
+.directionInputs-2 #getDirections, .directionInputs #paneReset {
+    display: inline-block;
+    background: #acacac;
+    color: #FFF;
+    width: 165px;
+    padding: 3px;
+    text-align: center;
+    font-size: 13px;
+}
+.directionInputs-2 #paneReset {
+    width: 85px;
+}
+/*-----------------------------------END Directions-------------------------*/

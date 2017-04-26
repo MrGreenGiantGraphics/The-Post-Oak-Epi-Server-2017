@@ -1,0 +1,297 @@
+﻿
+/* Code for the Layout Navagation START */
+
+@import "compass/css3";
+
+/* Code for the Layout Logo START */
+
+.main-nav-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.nh-resort {
+    background-color: $color-mine-shaft;
+    z-index: 1;
+}
+
+.nh-meetings {
+    background-color: $color-abbey;
+    z-index: 2;
+}
+
+.nh-home {
+    background-color: $color-clear;
+    z-index: 3;
+}
+
+
+/* Code for the Responsive Menu START */
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px
+}
+
+/*-----------------------------------Custom BootStrap CSS START-------------------------*/
+
+#child header {
+     background-color:#252525;
+	padding-bottom:25px;
+}
+#child header #top-nav-bar {
+    margin:0 auto;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-header {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+
+.navbar-collapse.in {
+    overflow-y: auto;
+}
+
+.collapse.in {
+    display: block;
+}
+
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  /* border-top: 1px solid transparent; */
+  /* -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); */
+  /* box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);*/
+
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin: 14px 15px 14px 0;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+@media (min-width: 947px) {
+    .navbar-header {
+        float: left;
+    }
+}
+
+
+/*-----------------------------------Custom BootStrap CSS END-------------------------*/
+
+/*-----------------------------------START navigation-------------------------*/
+.menu-container {
+    width: 100%;
+    min-width: 1133px;
+    background-color: $color-clear;
+    margin: 0 0 0 -2%;
+    padding: 0px;
+}
+
+/* When the screen gets to 946 pixels center the content */
+
+.menu-container .menu-item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0;
+    min-width: 1010px;
+    background-color: $color-clear;
+}
+
+.menu-item > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item > li {
+    display: -webkit-flex;
+    display: flex;
+    margin: 2px;
+    padding: 3px 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5em;
+    font-family: $font-adobe;
+    background-color: $color-clear;
+}
+
+.menu-item li a {
+    display: -webkit-flex;
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 13px 14px;
+    transition: 0.4s;
+}
+
+.menu-item li:last-of-type a {
+    border-bottom: none;
+}
+
+.menu-item li a:hover, a:focus {
+    color: #FFF;
+    background-color: $color-silver-chalice;
+}
+
+
+/*-----------END navigation-------------------------*/
+#top-nav-bar {
+    padding:0px;
+    margin:0px auto 142px;
+    max-width: 1263px;
+    width:100%;
+}
+
+#top-nav-bar li {
+    display:inline;
+    text-align:center;
+    padding:13px 14.74px;
+    text-transform:uppercase;
+    color:#FFF;
+    font-size:22px;
+}
+@media screen and (max-width:1181px) {
+	#top-nav-bar {
+		max-width:none;
+	}
+	#top-nav-bar li {
+		padding:9px 10px;
+		font-size:20px;
+	}
+}
+@media screen and (max-width:1093px) {
+	#top-nav-bar {
+        position: relative;
+        left: 28px;
+		max-width:none;
+	}
+	#top-nav-bar li {
+		padding:9px 10px;
+		font-size:18px;
+	}
+}
+@media screen and (max-width:1018px) {
+	#top-nav-bar {
+		max-width:888px;
+	}
+	#top-nav-bar li {
+		padding:6px;
+		font-size:20px;
+	}
+}
+
+@media screen and (max-width:946px) {
+	.menu-container {
+		margin:0px auto;
+	}
+}
+
+
+@media screen and (max-width:768px) {
+	#top-nav-bar {
+		max-width:none;
+	}
+	#top-nav-bar li {
+		display:block;
+	}
+	.navbar-collapse {
+		position: absolute;
+		left: auto;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 200;
+		width: 320px;
+        height: 131%;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		background-color:#252525;
+    	transition: 0.5s;
+		overflow:hidden;
+	}
+	.navbar-toggle {
+		z-index:5;
+	}
+	#mobile-menu {
+		width:100%;
+		padding:40px 10px;
+		border-bottom:1px solid #2a2d2f;
+	}
+
+    .main-nav-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: 775px;
+}
+
+    .menu-container .menu-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    min-width: 1010px;
+    background-color: $color-clear;
+}
+}
+@media screen and (min-width:768px) {
+	#mobile-menu {
+		display:none;
+	}
+}
+#top-nav-bar li a {
+	text-decoration:none;
+}
+#top-nav-bar li:hover {
+    background-color:#acacac;
+}
+
+/*-----------------------------------child header-------------------------*/

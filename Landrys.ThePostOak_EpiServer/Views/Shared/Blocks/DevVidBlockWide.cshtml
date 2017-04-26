@@ -1,0 +1,80 @@
+﻿@model DevVideoBlock
+<div class="dev_videos" id="preload-E1">
+    <!--The Development Area -->
+    <div class="dev_left" id="preload-E2">
+        <section class="">
+            <span class="" @Html.EditAttributes(x => x.TextEdit)>@Model.TextEdit</span>
+        </section>
+    </div>
+    <div class="dev_right" id="preload-E3">
+        @*This is the first image in the OverLay Start*@
+
+        <script src="//fast.wistia.com/embed/medias/nfudlqc477.jsonp" async></script>
+        <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+        <section class="wistia_embed wistia_async_nfudlqc477 popover=true popoverContent=link">
+            <a href="@Url.ContentUrl(Model.LinkUrlHash)">
+                <span @Html.EditAttributes(x => x.ImageA)>
+
+                    @if (Model.ImageA != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageA)" alt="@Model.AltA" class="flex-kind-1a img-responsive">
+
+                    }
+                </span>
+                <span @Html.EditAttributes(x => x.OverlayA)>
+
+                    @if (Model.OverlayA != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.OverlayA)" alt="@Model.AltA" class="flex-kind-2a img-responsive">
+
+                    }
+                </span>
+            </a>
+        </section>
+        @*This is the first image in the OverLay End*@
+        @*This is the second image in the OverLay Start*@
+        <section>
+            <a href="@Model.LinkUrlB">
+                <span @Html.EditAttributes(x => x.ImageB)>
+
+                    @if (Model.ImageB != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageB)" alt="@Model.AltB" class="flex-kind-1b img-responsive">
+
+                    }
+                </span>
+                <span @Html.EditAttributes(x => x.OverlayB)>
+
+                    @if (Model.OverlayB != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.OverlayB)" alt="@Model.AltB" class="flex-kind-2b img-responsive">
+
+                    }
+                </span>
+            </a>
+        </section>
+        @*This is the second image in the OverLay End*@
+        @*This is the three image in the OverLay Start*@
+        <section>
+            <a href="@Model.LinkUrlC">
+                <span @Html.EditAttributes(x => x.ImageC)>
+
+                    @if (Model.ImageC != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.ImageC)" alt="@Model.AltC" class="flex-kind-1c img-responsive">
+
+                    }
+                </span>
+                <span @Html.EditAttributes(x => x.OverlayC)>
+
+                    @if (Model.OverlayC != null)
+                    {
+                        <img src="@Url.ContentUrl(Model.OverlayC)" alt="@Model.AltC" class="flex-kind-2c img-responsive">
+
+                    }
+                </span>
+            </a>
+        </section>
+        @*This is the three image in the OverLay End*@
+    </div>
+</div>

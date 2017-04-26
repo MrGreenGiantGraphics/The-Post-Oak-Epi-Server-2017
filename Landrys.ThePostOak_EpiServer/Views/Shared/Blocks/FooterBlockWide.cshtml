@@ -1,0 +1,41 @@
+﻿@model FooterBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+
+<div id="block-image-footer">
+    <div class="row">
+        <div>
+            <div>
+                <div class="HeaderText">
+                    <section id="block-text-01">
+                        <span @Html.EditAttributes(x => x.Header)>@Model.Header</span>
+                    </section>
+                </div>
+            </div>
+            <div class="border">
+                <section id="block-image-01">
+                    @using (Html.BeginConditionalLink(!ContentReference.IsNullOrEmpty(Model.Link) && !(ViewContext.Controller is PreviewController),Url.PageLinkUrl(Model.Link),Model.Text, Model.Header))
+                    {
+                        <div class="mediaImg" @Html.EditAttributes(x => x.Image)>
+
+                            @if (Model.Image != null)
+                            {
+                                <img src="@Url.ContentUrl(Model.Image)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+                            }
+
+                            <span @Html.EditAttributes(x => x.ContentHolder01)>@Model.ContentHolder01</span>
+                        </div>
+                    }
+                </section>
+            </div>
+            <div>
+                <div class="mediaText">
+                    <section id="block-text-01">
+                        <span @Html.EditAttributes(x => x.Text)>@Model.Text</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

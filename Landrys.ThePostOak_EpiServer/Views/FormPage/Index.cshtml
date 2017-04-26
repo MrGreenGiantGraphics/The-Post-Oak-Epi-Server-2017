@@ -1,0 +1,21 @@
+﻿@using Landrys.ThePostOak_EpiServer
+@using EPiServer.Framework.Web.Mvc.Html
+@model PageViewModel<Landrys.ThePostOak_EpiServer.Models.Pages.FormPage>
+@{ Layout = "~/Views/Shared/Layouts/_LayoutForm.cshtml"; }
+
+@Html.PropertyFor(x => x.CurrentPage.ContentAreaHolder, new
+{
+    CssClass = "row equal-height",
+    tag = Global.ContentAreaTags.FullWidth
+})
+ <!-- content holder Xhtml -->
+<section>
+    <div>
+        @{ Html.RenderPartial("Gallery", Model); }
+    </div>
+</section>
+@Html.PropertyFor(x => x.CurrentPage.ContentAreaPlacer, new
+{
+    CssClass = "row equal-height",
+    tag = Global.ContentAreaTags.FullWidth
+})

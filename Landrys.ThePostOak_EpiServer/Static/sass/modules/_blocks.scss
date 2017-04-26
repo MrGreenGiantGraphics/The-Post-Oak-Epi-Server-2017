@@ -1,0 +1,1765 @@
+/********************Code Notes************************** 
+    CSS written by David Green - dgreen@ldry.com
+    Please contact me if you have any question
+    the following code is not optimized - August 12 2016. 
+************************END******************************/
+
+.carousel {
+    background: #2f4357;
+    margin-top: 20px;
+}
+
+.carousel .item img {
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+.DKsolid-bg {
+    background-color: #dad6cd;
+}
+
+
+
+.contact form {
+    background-color: #FFF;
+    border: #c7c7c7 5px solid;
+    font-size: 18px;
+    padding: 25px 50px;
+}
+
+.form-horizontal {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="hidden" i], input[type="image" i], input[type="file" i] {
+    -webkit-appearance: initial;
+    background-color: initial;
+    padding: initial;
+    border: initial;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*-----------------------------------START form-------------------------*/
+@media screen and (max-width: 849px) {
+    .contact form {
+        padding: 25px 20px 25px 5px;
+    }
+}
+
+.contact .form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.contact .form-control {
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 0px;
+}
+
+.contact input {
+    margin: 15px 0;
+}
+
+.contact label {
+    display: none;
+}
+
+.cgen .fn-gen, .cacc .fn-acc, .cext .fn-ext, .cmee .fn-mee, .coff .fn-off {
+    text-decoration: none;
+    background: #252525;
+    color: #FFF;
+    padding: 10px 8px;
+}
+/*-----------------------------------END form-------------------------*/
+/*-----------------------------------START list formats-------------------------*/
+.plain-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plain-list li {
+    padding: 12px 0;
+    font-size: 13px;
+}
+
+.plain-list li a {
+    text-decoration: none;
+}
+
+#tab-2 ul {
+    list-style-image: url(../img/list-diamond.png);
+}
+
+#tab-2 ul li {
+    padding: 4px 0px;
+    margin-left: 0px;
+    vertical-align: text-top;
+    font-size: 16px;
+}
+
+.horz-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horz-list li {
+    display: inline;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+}
+
+.form-nav {
+    /*	margin:-20px auto 20px;*/
+    margin: 0px auto 30px;
+    padding-top: 30px;
+    width: 1024px;
+}
+
+.form-nav li {
+    padding: 0 3px;
+}
+
+@media screen and (max-width: 1055px) {
+    .form-nav li {
+        padding: 0 2px;
+        font-size: 16px;
+    }
+
+    .form-nav {
+        width: 887px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .form-nav li {
+        padding: 0px;
+        font-size: 15px;
+    }
+
+    .form-nav {
+        width: 797px;
+    }
+}
+
+.form-nav a, .form-nav a:-webkit-any-link {
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 834px) {
+    .form-nav li {
+        padding: 5px;
+        font-size: 15px;
+        display: block;
+    }
+
+    .form-nav {
+        width: auto;
+        margin: 0px auto 10px;
+        padding-top: 10px;
+    }
+
+    .form-nav li:before {
+        content: " " !important;
+    }
+
+    .cgen .main-container, .cacc .main-container, .cext .main-container, .cmee .main-container, .coff .main-container {
+        padding: 5px 0 30px;
+        text-decoration: none;
+    }
+}
+
+.form-nav li:before {
+    content: " | ";
+}
+
+.form-nav li:first-child:before {
+    content: none;
+}
+/*-----------------------------------END list formats-------------------------*/
+
+.expimg {
+    display: inline;
+    max-width: 51%;
+    margin: 0 30px 30px 0;
+}
+
+@media screen and (min-width:733px) {
+    .expimg img {
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:732px) and (min-width:536px) {
+    article img, expimg img {
+        max-width: 70% !important;
+        margin: 0 15% !important;
+        width: 90% !important;
+    }
+}
+
+.expcontent {
+    display: inline;
+    width: 45%;
+}
+
+@media screen and (max-width:946px) {
+    .expcontent {
+        width: 44%;
+    }
+}
+
+@media screen and (max-width:828px) {
+    .expimg {
+        display: inline;
+        max-width: 40%;
+        margin: 0 30px 30px 0;
+    }
+
+    .expcontent {
+        width: 55%;
+    }
+}
+
+#diamond-shape {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+}
+
+#diamond-shape:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+}
+/**************************************MAIN SUB TOP**********************************************/
+
+/*code for the text content block*/
+
+/*This code uses flex to control the inline functionality*/
+.subpage-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: $color-clear;
+}
+
+.diamonds-small > .col-md-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.pattern-sub > .col-md-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/*This code controls the content block for the subpages START */
+#main-container-flex {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: $color-clear;
+    padding: 10px 10px;
+}
+
+.main-container-wrapper {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background-color: $color-clear;
+}
+
+.main-container-diamonds-md {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("/Static/img/diamonds-md.png") repeat-y left top;
+    background-color: $color-solid-bg;
+}
+
+.main-container-wrapper p {
+    position: relative;
+    top: 0px;
+    left: 42px;
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    text-align: center;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    line-height: 35px;
+    max-width: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.main-container-wrapper hgroup {
+    background-color: #d6cfc7;
+    color: #252525;
+    width: 100%;
+    padding: 0 8px;
+    margin-bottom: 10px;
+    line-height: 43px !important;
+    font-family: "bebas-neue";
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.main-container-left {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background-color: $color-clear;
+}
+
+.main-container-left img {
+    position: relative;
+    top: 0px;
+    left: 3%;
+}
+
+.main-container-right {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background-color: $color-clear;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.main-container p {
+    font-size: 18px;
+}
+
+
+.block-p {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    text-align: center;
+    color: #252525;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    line-height: 35px;
+    max-width: none;
+    background-color: $color-clear;
+}
+
+.textwrap-right {
+    clear: left;
+    float: right;
+    margin: 10px;
+}
+
+.textwrap-left {
+    clear: right;
+    float: left;
+    margin: 10px;
+    padding: 0 0 0 0;
+}
+
+.main-container-button {
+    position: relative;
+    top: 0;
+    left: 0px;
+    float: right;
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin: 0 0 0 0;
+    background-color: $color-clear;
+}
+
+.main-container-button .bttn {
+    position: relative;
+    top: 0px;
+    left: 35%;
+    margin: 8px;
+    border: 0px;
+    border-radius: initial;
+    padding: 14px 15px;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.bttn-2, .bttn {
+    position: relative;
+    top: 0px;
+    left: -3px;
+    margin: 8px;
+    border: 0px;
+    border-radius: initial;
+    padding: 14px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #FFF;
+}
+
+.bttn-2:hover {
+    color: #857a7a;
+}
+
+.bttn:hover {
+    color: #857a7a;
+}
+
+.main-container-button a:hover {
+    color: #857a7a;
+}
+
+.main-container-left-L {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background-color: $color-clear;
+}
+
+.main-container-right-R {
+    position: relative;
+    top: 0px;
+    left: -26px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background-color: $color-clear;
+}
+
+/*This code controls the content block for the subpages END */
+
+
+/**************************************MAIN SUB MID**********************************************/
+/*SubPage - Main Code Start ONE*/
+
+.solid-background {
+    background-color: #efece6;
+}
+
+.exp-wrapper {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+    width: 100%;
+    padding: 3px;
+    margin: 25px;
+}
+
+
+
+.content-border1 {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.content-border2 {
+    width: 100%;
+    height: 100%;
+    border: #d5d0c6 solid 1px;
+    padding: 20px;
+}
+
+.content-border2:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+article {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+    width: 100%;
+    border: #d5d0c6 solid 4px;
+    padding: 3px;
+    margin: 25px;
+}
+
+article .bttn {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 10px 0 0 40%;
+}
+
+
+article .hr-diamonds {
+    position: relative;
+    top: 0px;
+    left: 13px;
+    width: auto;
+    max-width: 330px;
+    height: 16px;
+    background-size: 330px 16px;
+    background: url("/Static/img/hr-diamond.png") center center no-repeat;
+}
+
+.diamonds-small {
+    width: 100%;
+    background: url('/Static/img/diamonds-sm.png') center center no-repeat;
+    height: 100%;
+    max-height: none;
+    background-size: 100% auto;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.diamond-bar {
+    background: url('/Static/img/diamond-bar.png') repeat-x;
+    margin: 0px;
+    width: 100%;
+    border: 0;
+    height: 20px;
+}
+
+.diamond-bar-pattern {
+    background: url('/Static/img/diamond-bar.png') repeat-x;
+    margin: 0px;
+    width: 100%;
+    border: 0;
+    height: 20px;
+}
+
+#child .pattern {
+    height: auto;
+    max-height: none;
+    background-size: 100% auto;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1056px) {
+    #child .pattern {
+        background-size: cover;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+    }
+}
+
+.solid-bg {
+    background-color: #efece6;
+}
+
+.DKsolid-bg {
+    background-color: #dad6cd;
+}
+
+.diamonds-sm {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: url('/Static/img/diamonds-sm.png') left top no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.two-col {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.two-col:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/*SubPage - Main Code Start TWO*/
+.pattern-sub {
+    width: 100%;
+    background: url('/Static/img/patterned-bg.png') center center no-repeat;
+    height: auto;
+    max-height: 100%;
+    padding: 0px 0px;
+    overflow: hidden;
+}
+
+/*Code for Image Block Section Area Three*/
+
+.diamonds-middle {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('/Static/img/diamonds-md.png') repeat-y left top;
+}
+
+
+/*SubPage - Main Code Start FOUR*/
+
+#epi-scaler_sub {
+    min-width: 1424px;
+    height: auto;
+    background-size: 100% auto;
+    padding: 0px 0px;
+    overflow: hidden;
+}
+
+.pattern-sub-02 {
+    width: 100%;
+    margin: 0px;
+    padding: 50px 0px 70px;
+    background: url("/Static/img/patterned-bg-2.jpg") left top no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+#subpage-holder {
+    position: relative;
+    top: 0px;
+    left: -30px;
+    display: -webkit-row;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 5px;
+    -webkit-flex: row;
+    flex: row;
+    order: 3;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.subpage-images-01 {
+    display: -webkit-row;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin: 4px;
+    padding: 5px;
+    -webkit-flex: row;
+    flex: row;
+    order: 3;
+}
+
+.subpage-images-flex {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    margin-left: 5px;
+    z-index: 3;
+    background-color: transparent;
+}
+/*image*/
+.su-image-01 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    background-color: transparent;
+}
+
+.su-image-01 img {
+    max-width: 180px;
+    border: #c7c7c7 5px solid;
+    margin: auto;
+}
+
+/*button*/
+.su-text-01 {
+    position: relative;
+    top: -63px;
+    left: 29%;
+    display: block;
+    width: 112px;
+    height: 35px;
+    margin: 80px 0 0 0;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background-color: $color-black;
+}
+
+.su-text-02 {
+    position: relative;
+    top: 0px;
+    left: 20px;
+    display: block;
+    width: 53%;
+    min-width: 250px;
+    background-color: transparent;
+}
+
+.su-text-02 p {
+    font-family: BellMt;
+    font-style: italic;
+    padding: 10px 0 25px;
+}
+
+
+/* Code for the subpage section END */
+
+/**************************************MAIN SUB FOOTER**********************************************/
+
+/*Code for Footer Navagation Bar - Section Area Seven*/
+#hospitality-bar-sub {
+    position: relative;
+    top: 0em;
+    left: 0em;
+    z-index: 1;
+    width: 100%;
+    height: 10em;
+    margin: 0 auto;
+    background-color: #252525;
+}
+
+.subpage-tabs {
+    margin: 4px;
+    padding: 5px;
+    height: auto;
+    flex: 0 1 100%;
+    order: 3;
+    background-color: $color-clear;
+}
+
+
+#subpage-tabs-holder {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: $color-clear;
+}
+
+/*Code for Footer Section Area Eight*/
+
+/*code form the text content block*/
+
+/* Code for the subpage section START */
+
+.subpage-carousel {
+    margin: 4px;
+    padding: 5px;
+    height: auto;
+    flex: 0 1 100%;
+    order: 2;
+    background-color: $color-primary;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Responsive design for ipad */
+
+    #epi-scaler_sub {
+        min-width: 1000px;
+        height: auto;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .subpage-container {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: $color-clear;
+    }
+
+    .diamonds-small > .col-md-12 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .pattern-sub > .col-md-12 {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .solid-background {
+        background-color: #efece6;
+    }
+
+    .diamonds-small {
+        width: 100%;
+        background: url('/Static/img/diamonds-sm.png') center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamond-bar-pattern {
+        background: url('/Static/img/diamond-bar.png') repeat-x;
+        margin: 0px;
+        width: 100%;
+        border: 0;
+        height: 20px;
+    }
+
+    h2 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #FFF;
+        font-family: "bebas-neue";
+        font-size: 94px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        color: #000;
+        text-align: center;
+        font-family: BellMt;
+        font-style: italic;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .main-container-wrapper {
+        position: relative;
+        top: 0px;
+        left: -61px;
+        display: block;
+        width: 100%;
+        max-width: 1024px;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px 10px;
+        background-color: $color-clear;
+    }
+
+    .space-block {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 0 0 20px;
+    }
+
+    .pattern-sub-02 {
+        width: 100%;
+        margin: 0px;
+        padding: 50px 0px 70px;
+        background: url("/Static/img/patterned-bg-2.jpg") left top no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    #subpage-holder {
+        position: relative;
+        top: 0px;
+        left: -30px;
+        display: -webkit-row;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin: 4px;
+        padding: 5px;
+        -webkit-flex: row;
+        flex: row;
+        order: 3;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .subpage-images-01 {
+        display: -webkit-row;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin: 4px;
+        padding: 5px;
+        -webkit-flex: row;
+        flex: row;
+        order: 3;
+    }
+
+    .subpage-images-flex {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        margin-left: 5px;
+        z-index: 3;
+        background-color: transparent;
+    }
+    /*image*/
+    .su-image-01 {
+        position: relative;
+        top: 0px;
+        left: 10px;
+        display: block;
+        background-color: transparent;
+    }
+
+    .su-image-01 img {
+        max-width: 180px;
+        border: #c7c7c7 5px solid;
+        margin: auto;
+    }
+
+    /*button*/
+    .su-text-01 {
+        position: relative;
+        top: -63px;
+        left: 29%;
+        display: block;
+        width: 112px;
+        height: 35px;
+        margin: 80px 0 0 0;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: $color-black;
+    }
+
+    .su-text-02 {
+        position: relative;
+        top: 0px;
+        left: -16px;
+        display: block;
+        width: 53%;
+        min-width: 250px;
+        background-color: transparent;
+    }
+
+    .su-text-02 p {
+        font-family: BellMt;
+        font-style: italic;
+        padding: 10px 0 25px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Responsive design for ipad Mini */
+
+    .main-container {
+        width: 75%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .main-container .textwrap-left {
+        display: block;
+        width: 100%;
+        clear: right;
+        float: left;
+        margin: 10px;
+        padding: 0 48px 0 0;
+    }
+
+    #epi-scaler_sub {
+        height: auto;
+        max-height: none;
+        min-width: 768px;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamonds-small {
+        position: relative;
+        top: 0px;
+        left: 33px;
+        width: 93%;
+        background: url("/Static/img/diamonds-sm.png") center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamond-bar-pattern {
+        background: url('/Static/img/diamond-bar.png') repeat-x;
+        margin: 0px;
+        width: 100%;
+        height: 20px;
+        border: 0px;
+    }
+
+    .main-container-wrapper {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 10px 10px;
+        background-color: $color-clear;
+    }
+
+    .main-container-button {
+        position: relative;
+        top: 0;
+        left: -64px;
+        float: right;
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .main-container-left img {
+        position: relative;
+        top: 0px;
+        left: 15%;
+    }
+
+    article {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        float: left;
+        width: 75%;
+        border: #d5d0c6 solid 4px;
+        padding: 3px;
+        margin: 25px;
+    }
+
+    .main-container-left-L {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 0;
+        background-color: $color-clear;
+    }
+
+    .main-container-right-R {
+        position: relative;
+        top: 0px;
+        left: -26px;
+        float: left;
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 0;
+        background-color: $color-clear;
+    }
+
+    .exp-wrapper {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        float: left;
+        width: 75%;
+        padding: 3px;
+        margin: 25px;
+    }
+
+    .pattern-sub-02 {
+        width: 100%;
+        margin: 0px;
+        padding: 50px 0px 70px;
+        background: url("/Static/img/patterned-bg-2.jpg") left top no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+
+    #subpage-holder {
+        position: relative;
+        top: 0px;
+        left: -30px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin: 4px;
+        padding: 5px;
+        flex: row;
+        order: 3;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+
+    .subpage-images-01 {
+        display: -webkit-row;
+        display: flex;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin: 4px;
+        padding: 5px;
+        -webkit-flex: row;
+        flex: row;
+        order: 3;
+    }
+
+    .subpage-images-flex {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        margin-left: 5px;
+        z-index: 3;
+        background-color: transparent;
+    }
+    /*image*/
+    .su-image-01 {
+        position: relative;
+        top: 0px;
+        left: 40px;
+        display: block;
+        background-color: transparent;
+    }
+
+    .su-image-01 img {
+        max-width: 180px;
+        border: #c7c7c7 5px solid;
+        margin: auto;
+    }
+
+    /*button*/
+    .su-text-01 {
+        position: relative;
+        top: -63px;
+        left: 61%;
+        display: block;
+        width: 112px;
+        height: 35px;
+        margin: 80px 0 0 0;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: $color-black;
+    }
+
+    .su-text-02 {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+        width: 100%;
+        min-width: 250px;
+        background-color: transparent;
+    }
+
+    .su-text-02 p {
+        font-family: BellMt;
+        font-style: italic;
+        padding: 10px 0 25px;
+    }
+
+    .diamonds-small {
+        position: relative;
+        top: 0px;
+        left: 33px;
+        width: 93%;
+        background: url("/Static/img/diamonds-sm.png") center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamond-bar-pattern {
+        background: url('/Static/img/diamond-bar.png') repeat-x;
+        margin: 0px;
+        width: 100%;
+        border: 0;
+        height: 20px;
+    }
+
+    #hospitality-bar-sub {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 725px;
+        margin: 0 auto;
+        background-color: #252525;
+    }
+
+    .logo-container-sub {
+        position: relative;
+        top: 0em;
+        left: -6em;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        list-style-type: none;
+        margin: 0 0 0 78px;
+        padding: 0 0 0 30px;
+        max-width: 1185px;
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /* Responsive design for iphone 5 */
+
+    #epi-scaler_sub {
+        height: auto;
+        max-height: none;
+        min-width: 640px;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamonds-small {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        background: url("/Static/img/diamonds-sm.png") center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .diamond-bar-pattern {
+        background: url('/Static/img/diamond-bar.png') repeat-x;
+        margin: 0px;
+        width: 100%;
+        border: 0;
+        height: 20px;
+    }
+
+    .main-container-left img {
+        position: relative;
+        top: 0px;
+        left: 8%;
+    }
+
+    #main-container-flex > .row {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    #subpage-holder {
+        position: relative;
+        top: 0px;
+        left: -15px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-align-content: center;
+        align-content: center;
+        margin: 4px;
+        padding: 5px;
+        order: 3;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1024px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    /*image*/
+    .su-image-01 {
+        position: relative;
+        top: 0px;
+        left: 5px;
+        display: block;
+        background-color: transparent;
+    }
+
+    .su-image-01 img {
+        max-width: 180px;
+        border: #c7c7c7 5px solid;
+        margin: auto;
+    }
+
+    .su-text-01 {
+        position: relative;
+        top: -63px;
+        left: 41%;
+        display: block;
+        width: 112px;
+        height: 35px;
+        margin: 80px 0 0 0;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: black;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    /* Responsive design for iphone */
+
+    #epi-scaler_sub {
+        min-width: 320px;
+        background-size: 100% auto;
+        padding: 0px;
+        height: auto;
+        max-height: none;
+        overflow: hidden;
+    }
+
+    .diamonds-small {
+        position: relative;
+        top: 0px;
+        left: -7px;
+        width: 100%;
+        background: url("/Static/img/diamonds-sm.png") center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+
+    .main-container .bg-light {
+        display: block;
+        width: 135px;
+        height: auto;
+        background-color: #acacac;
+        margin: 16px 0 0 0;
+    }
+
+    .main-container-button {
+        position: relative;
+        top: 0;
+        left: -107px;
+        float: right;
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 0 0 0 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #main-container-flex > .row {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    #subpage-holder {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-align-content: center;
+        align-content: center;
+        margin: 4px;
+        padding: 5px;
+        order: 3;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1024px;
+        margin: 0 auto;
+        list-style-type: none;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .diamonds-small {
+        position: relative;
+        top: 0px;
+        left: -7px;
+        width: 100%;
+        background: url("/Static/img/diamonds-sm.png") center center no-repeat;
+        height: 100%;
+        max-height: none;
+        background-size: 100% auto;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+
+    .diamonds-small h2 {
+        position: relative;
+        top: 0px;
+        left: -2px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #FFF;
+        font-family: "bebas-neue";
+        font-size: 50px;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
+
+    .diamonds-small h4 {
+        position: relative;
+        top: 0px;
+        left: -2px;
+        color: #000;
+        text-align: center;
+        font-family: BellMt;
+        font-style: italic;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+
+
+    /*image*/
+    .su-image-01 {
+        position: relative;
+        top: -18px;
+        left: -9px;
+        display: block;
+        background-color: transparent;
+    }
+
+    .su-image-01 img {
+        max-width: 180px;
+        border: #c7c7c7 5px solid;
+        margin: auto;
+    }
+
+    .su-text-01 {
+        position: relative;
+        top: -63px;
+        left: 53px;
+        display: block;
+        width: 112px;
+        height: 35px;
+        margin: 80px 0 0 0;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: black;
+    }
+
+    .su-text-02 {
+        position: relative;
+        top: 0px;
+        left: -22px;
+        display: block;
+        width: 50%;
+        min-width: 250px;
+        background-color: transparent;
+    }
+
+    .su-text-02 p {
+        font-family: BellMt;
+        font-style: italic;
+        padding: 10px 0 25px;
+    }
+        article .bttn {
+        position: relative;
+        top: 0px;
+        left: -28px;
+        margin: 10px 0 0 40%;
+    }
+}
+
+
+
+/*-----------------------------------END container backgrounds-------------------------*/
+
+#preload-E1 {
+    background: url('/Static/img/events/gallery/grand-ballroom.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-E2 {
+    background: url('/Static/img/events/gallery/ballroom-I.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-E3 {
+    background: url('/Static/img/events/gallery/cars.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-E4 {
+    background: url('/Static/img/events/gallery/conference-center-entry-doors.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-E5 {
+    background: url('/Static/img/events/gallery/conference-center-entry.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-apt1 {
+    background: url('/Static/img/office/office-floor-plan.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-apt2 {
+    background: url('/Static/img/resort/hotel-bathroom.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-apt3 {
+    background: url('/Static/img/resort/hotel-living.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-o1 {
+    background: url('/Static/img/office/office-floor-plan.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-o2 {
+    background: url('/Static/img/office/office-vip-floorplan.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-o3 {
+    background: url('/Static/img/office/boardroom.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma1 {
+    background: url('/Static/img/mastros/Mastros1.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma2 {
+    background: url('/Static/img/mastros/Mastros2.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma3 {
+    background: url('/Static/img/mastros/Mastros3.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma4 {
+    background: url('/Static/img/mastros/Mastros4.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma5 {
+    background: url('/Static/img/mastros/Mastros5.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma6 {
+    background: url('/Static/img/mastros/Bone-In-Ribeye.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ma7 {
+    background: url('/Static/img/mastros/cocktail.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ex1 {
+    background: url('/Static/img/experience/spa-3.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ex2 {
+    background: url('/Static/img/experience/pool-3.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-ex3 {
+    background: url('/Static/img/experience/shopping-4.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-w1 {
+    background: url('/Static/img/williegs/slide-5.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-w2 {
+    background: url('/Static/img/williegs/slide-1.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-w3 {
+    background: url('/Static/img/williegs/slide-4.jpg') no-repeat -9999px -9999px;
+}
+
+#preload-w4 {
+    background: url('/Static/img/williegs/Surf-&-Turf.jpg') no-repeat -9999px -9999px;
+}
+
+/*-----------------------------------START navigation-------------------------*/
+
+/*-----------------------------------START promotions section-------------------------*/
+.promos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.promos li {
+    width: 25%;
+    text-align: center;
+    float: left;
+    padding: 0 6px;
+}
+
+@media screen and (max-width: 1139px) {
+    .promos li {
+        padding: 0 15px;
+    }
+
+    .promos {
+        max-width: 946px;
+    }
+}
+
+@media screen and (max-width: 1139px) {
+    .pattern2 {
+        padding: 0 5px;
+    }
+
+    .promos li {
+        width: 50%;
+        padding: 50px 36px;
+    }
+}
+
+@media screen and (max-width: 708px) {
+    .promos li {
+        padding: 50px 5px;
+    }
+}
+
+@media screen and (max-width: 584px) {
+    .promos li {
+        width: 100%;
+        padding: 30px 5px;
+    }
+}
+
+.promos img {
+    width: 100%;
+    max-width: 180px;
+    border: #c7c7c7 5px solid;
+    margin: auto;
+}
+
+.promos p {
+    font-family: BellMt;
+    font-style: italic;
+    padding: 10px 0 26px;
+    font-size: 18px;
+    max-width: 368px;
+}
+/*-----------------------------------END promotions section-------------------------*/

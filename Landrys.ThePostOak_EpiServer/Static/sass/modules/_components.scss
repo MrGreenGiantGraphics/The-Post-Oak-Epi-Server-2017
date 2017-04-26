@@ -1,0 +1,392 @@
+/********************Code Notes************************** 
+    CSS written by David Green - dgreen@ldry.com
+    Please contact me if you have any question
+    the following code is not optimized - August 12 2016. 
+************************END******************************/
+/*-----------------------------------START Weather-------------------------*/
+.weather {
+    width: 442px;
+    margin: auto;
+    font-family: BellMt;
+    font-size: 25px;
+}
+
+.weather li {
+    padding: 20px 10px 0;
+    float: left;
+}
+
+.weather:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.weather img {
+    width: auto !important;
+}
+
+.weather h5 {
+    display: inline;
+    text-align: center;
+    margin: 0 16px 0;
+    width: 105px;
+}
+
+#wxWrap {
+    position: relative;
+    top: 0px;
+    left: 44px;
+    min-width: 150px;
+    margin: auto;
+    background-color: black;
+}
+
+#wxIcon2 {
+    display: inline-block;
+    width: 44px;
+    height: 36px;
+    float: left;
+    padding: 2px 5px 0;
+}
+
+#wxTemp {
+    float: left;
+    padding: 2px 10px 0;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.main-container-weather {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+/*-----------------------------------Gallery Code-------------------------*/
+
+
+/*-----------------------------------START gallery page-------------------------*/
+
+
+/*-----------------------------------START gallery page-------------------------*/
+@media (min-width: 768px) {
+    .row-fluid .span3 {
+        width: 24.734%;
+    }
+
+    .row-fluid .span6 {
+        width: 49.822%;
+    }
+
+    .row-fluid [class*="span"] {
+        margin-left: 0.354%;
+        margin-bottom: 0.354%;
+    }
+
+    .nested [class*="span"] {
+        margin-left: 0.710%;
+        margin-bottom: 0.710%;
+    }
+
+    .nested .span6 {
+        width: 49.622%;
+    }
+
+    .galleryfix [class*="span"] {
+        margin-bottom: 0% !important;
+    }
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.hovereffect a.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.hovereffect:hover img {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.hovereffect:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+.icon {
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: .2s opacity ease-in-out;
+    transition: .2s opacity ease-in-out;
+}
+/*-----------------------------------END gallery page-------------------------*/
+
+#gallery-wrapper > .col-md-6, .col-md-3, col-md-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+#gallery-wrapper > row {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+
+#gallery-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 270px;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.gallery-row {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    padding: 0 0 0 0;
+    background-color: #fff;
+}
+
+.gallery-row .gallery-lg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 411px;
+    margin: 5px 0 0 10px;
+    background-color: transparent;
+}
+
+.gallery-img-6 .gallery-sm-img-left {
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto;
+    margin: 5px 0 0 16px;
+    background-color: transparent;
+}
+
+.gallery-sm-img-left img {
+    width: 340px;
+    height: 203px;
+}
+
+.gallery-sm-img-right img {
+    width: 340px;
+    height: 203px;
+}
+
+.gallery-img-6 .gallery-sm-img-right {
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto;
+    margin: 5px 0 0 -17px;
+    background-color: transparent;
+}
+
+.gallery-img-12 {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
+.gallery-img-12 .gallery-sm-img-bl {
+    display: block;
+    float: left;
+    width: 25%;
+    height: auto;
+    margin: 5px 0 0 5px;
+    background-color: transparent;
+}
+
+.gallery-img-6 .gallery-sm-img-left-1 {
+    position: relative;
+    top: 0;
+    left: 24px;
+    display: block;
+    float: left;
+    width: 50%;
+    height: auto;
+    margin: 2px 0 0 -3px;
+    background-color: transparent;
+}
+
+.gallery-img-6 .gallery-sm-img-right-1 {
+    position: relative;
+    top: 0;
+    left: 18px;
+    display: block;
+    float: right;
+    width: 50%;
+    height: auto;
+    margin: 2px 0 0 -3px;
+    background-color: transparent;
+}
+
+.gallery-sm-img-left-1 img {
+    width: 355px;
+    height: 203px;
+}
+
+.gallery-sm-img-right-1 img {
+    width: 355px;
+    height: 203px;
+}
+
+.gallery-row .gallery-lg-img-1 {
+    position: absolute;
+    top: -5px;
+    left: 4px;
+    width: 100%;
+    height: 395px;
+    margin: 5px 0 0 10px;
+    background-color: transparent;
+}
+
+
+.gallery-img-12 .gallery-sm-img-br {
+    display: block;
+    float: left;
+    width: 24%;
+    height: 200px;
+    margin: 5px 0 0 5px;
+    background-color: transparent;
+}
+
+.gallery-sm-img-br img {
+    height: 200px;
+}
+
+@media (max-width: 1024px) {
+    .gallery-img-6 {
+        width: 100%;
+    }
+
+    .gallery-sm-img-left-1 {
+        position: relative;
+        top: 0;
+        left: 0;
+        float: left;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .gallery-lg-img-1 img {
+        width: 100%;
+        height: 410px;
+        margin: 0 0 0 9px;
+    }
+
+    .gallery-lg-img img {
+        width: 100%;
+        height: 410px;
+    }
+
+    .gallery-sm-img-bl img {
+        width: 355px;
+        height: 203px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gallery-img-6 .gallery-sm-img-left {
+        width: 100%;
+    }
+
+    .gallery-sm-img-left img, .gallery-sm-img-right img, .gallery-img-6 .gallery-sm-img-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-img-12, .gallery-img-12 .gallery-sm-img-bl, .gallery-img-12 .gallery-sm-img-br {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-sm-img-br img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-sm-img-bl img {
+        width: 100%;
+        height: auto;
+    }
+
+    #gallery-wrapper {
+        margin-bottom: 347px;
+    }
+}

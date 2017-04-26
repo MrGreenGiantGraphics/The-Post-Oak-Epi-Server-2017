@@ -1,0 +1,128 @@
+﻿@using System.Web.Optimization
+@using EPiServer.Framework.Web.Mvc.Html
+@model IPageViewModel<SitePageData>
+<!DOCTYPE html>
+<html lang="@Model.CurrentPage.LanguageBranch">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Landrys inc.">
+    <title>@Model.CurrentPage.MetaTitle</title>
+    <!--Adobe typekit fonts-->
+    <script src="https://use.typekit.net/onn6lwj.js"></script>
+    <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
+    <!-- Custom css Files -->
+    <link href="~/Static/css/bootstrap-3-3-6.min.css" rel="stylesheet" />
+    <link href="~/Static/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Main-site css Files -->
+    <link href="~/Static/css/editor.css" rel="stylesheet" media="screen">
+    <link href="~/Static/css/main.css" rel="stylesheet" media="screen">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Fonts Google & BootStrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <!-- Bootstrap JavaScript files-->
+    <script src="~/Static/js/jquery-1.11.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Lightbox -->
+    <link href="~/Static/css/lightbox.css" rel="stylesheet" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--roundabout carousel and favIcon-->
+    <link rel="icon" type="image/png" href="~/Static/img/favicon.png">
+    <link href="~/Static/css/roundabout-carousel.css" rel="stylesheet" />
+    <!--tabbed content-->
+    <script src="~/Static/js/modernizr-2.8.3.js"></script>
+    @Html.CanonicalLink()
+    @Html.AlternateLinks()
+    @Html.RequiredClientResources("Header") @*Enable components to require resources. For an example, see the view for VideoBlock.*@
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TG2J7KV');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TG2J7KV');</script>
+    <!-- End Google Tag Manager -->
+    <!--Google recaptcha-->
+    <script>
+var RC2KEY = '6LdBgSUTAAAAAONby7IGo-dtTIbf6Td_bc_WH2tx',
+    doSubmit = false;
+var onloadCallback = function() {
+    //alert("grecaptcha is ready!");
+    widgetId1 = grecaptcha.render('g-recaptcha', {
+	          'sitekey' : '6LdBgSUTAAAAAONby7IGo-dtTIbf6Td_bc_WH2tx'
+        });
+  };
+function reCaptchaVerify(response) {
+    if (response === grecaptcha.getResponse()) {
+        doSubmit = true;
+    }
+}
+
+function reCaptchaExpired () {
+    /* do something when it expires */
+}
+
+function reCaptchaCallback () {
+    grecaptcha.render('id', {
+        'sitekey': RC2KEY,
+        'secret': "6LdBgSUTAAAAAE1zi_ONy7D3-sB30JU8lG9W7oeO",
+        'callback': reCaptchaVerify,
+        'expired-callback': reCaptchaExpired
+    });
+}
+
+function checkcaptcha()
+{
+	var captext = grecaptcha.getResponse(widgetId1);
+	if (captext=="")
+	{
+		alert("* reCAPTCHA box not checked.");
+		event.preventDefault();
+		return false;
+	}
+	else
+		return true;
+}
+    </script>
+
+</head>
+<body id="child">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG2J7KV"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script src="~/Static/js/lightbox.min.js"></script>
+    <!-- End Google Tag Manager (noscript) -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="" defer=""></script>
+    @Html.RenderEPiServerQuickNavigator()
+    @Html.FullRefreshPropertiesMetaData()
+    <!--------------- Footer Section ------------>
+    <div>
+        @RenderBody()
+        <footer id="footer_root">
+            @if (Model.CurrentPage.PageTypeName == "SubPage")
+            {
+                Html.RenderPartial("Footer", Model);
+            }
+        </footer>
+    </div>
+    @Html.RequiredClientResources("Footer")
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</body>
+</html>

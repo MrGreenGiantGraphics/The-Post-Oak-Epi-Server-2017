@@ -1,0 +1,56 @@
+﻿@model KindImageBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+
+<div id="KindImageBlock">
+    <section id="block-kind-block-top">
+
+        <div class="image-a" @Html.EditAttributes(i => i.ImageA)>
+
+            @if (Model.ImageA != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageA)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+
+            <div id="kind-text-holder">
+                <span @Html.EditAttributes(x => x.TextArea)>@Model.TextArea</span>
+            </div>
+            <div class="lg-feature">
+                <img src="~/Static/img/gallery-overlay.png" alt="dim image" />
+            </div>
+
+        </div>
+
+</section>
+<section id="block-kind-block-bot">
+    <div id="kind-image-holder-top">
+        <div class="image-b" @Html.EditAttributes(i => i.ImageB)>
+
+            @if (Model.ImageB != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageB)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+        </div>
+        <div class="image-c" @Html.EditAttributes(i => i.ImageC)>
+            @if (Model.ImageC != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageC)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+        </div>
+    </div>
+    <div id="kind-image-holder-bot">
+        <div class="image-d" @Html.EditAttributes(i => i.ImageD)>
+            @if (Model.ImageD != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageD)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+        </div>
+        <div class="image-e" @Html.EditAttributes(i => i.ImageE)>
+            @if (Model.ImageE != null)
+            {
+                <img src="@Url.ContentUrl(Model.ImageE)" alt="@Model.Alt" longdesc="@Model.Desc" class="img-responsive">
+            }
+        </div>
+    </div>
+</section>
+</div>

@@ -1,0 +1,83 @@
+/*-----------------------------------START buttons-------------------------*/
+#top-home-01 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    margin: 0 0 0 0;
+
+}
+
+#top-home-02 {
+    position: relative;
+    top: 102px;
+    left: 0px;
+    display: block;
+}
+.scroll {
+    position: relative;
+    top: 330px;
+    left: 0px;
+    display: block;
+    margin: 0 0 0 0;
+    width:100%;
+    font-style:italic;
+    margin:auto;
+    text-align:center;    
+}
+.scroll img {
+    width:40px;
+    margin:auto;
+}
+.bttn {
+    margin: 8px;
+    border: 0px;
+    border-radius: initial;
+    padding: 14px 15px;
+    text-transform: uppercase;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.bttn:hover {
+    color: #FFF;
+}
+
+.btn {
+    margin: 0px;
+    border:0px;
+    border-radius:initial;
+    padding:14px 15px;
+    text-transform:uppercase;
+	text-decoration:none;
+    color:#FFF;
+    text-align:center;
+	font-size: 14px;
+    font-weight: 400;
+	line-height: 1.42857143;
+	white-space: nowrap;
+    vertical-align: middle;
+}
+.btn:hover {
+    color:#FFF;
+}
+
+.button_spacer {
+     margin: 0px 0px 0px 40px;
+}
+
+.button_spacer_B {
+     margin: 0px 0px 0px 40px;
+}
+.bg-light{
+    background-color:#acacac;
+}
+.bg-dark {
+    background-color:#252525;
+}
+
+/*-----------------------------------END buttons-------------------------*/

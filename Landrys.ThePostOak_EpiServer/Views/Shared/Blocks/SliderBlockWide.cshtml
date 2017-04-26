@@ -1,0 +1,18 @@
+﻿@model SliderBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+<div class="pattern-sub">
+    <!-- Block Element Start -->
+    <section class="col-md-12">
+        <div class="row equal-height">
+            <div class="block sliderblock full span12">
+                <div>
+                    <!-- Place main content here -->
+                    <section @Html.EditAttributes(x => x.ContentAreaHolder)>@Model.ContentAreaHolder </section>
+                    <!-- Place main content here -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Block Element End -->
+</div>

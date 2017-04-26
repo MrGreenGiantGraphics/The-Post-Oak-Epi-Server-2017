@@ -1,0 +1,21 @@
+﻿@model IPageViewModel<SitePageData>
+<div class="main-container">
+    <p>The Post Oak is prominently located in the Galleria and Uptown area along West Loop South, with convenient access from Loop 610, Holly Hurst Street, and Hallmark Drive.</p>
+    <div id="mapCanvas-2">&#160;</div>
+    <div id="">
+        <div class="directionInputs-2">
+            <form>
+                <p>
+                    <label>A</label><input type="text" value="" id="dirSource" /> &nbsp;
+                    <label>B</label><input type="text" value="" id="dirDestination" /> &nbsp;
+                    <a href="#getDirections" id="getDirections">Get Directions</a> &nbsp;
+                    <a href="#reset" id="paneReset">Reset</a>
+                </p>
+            </form>
+        </div>
+        <div id="directionSteps-">
+            <p class="msg"></p>
+        </div>
+    </div>
+    <script src="~/Static/js/postoakmap.js"></script>
+</div><!-- container -->

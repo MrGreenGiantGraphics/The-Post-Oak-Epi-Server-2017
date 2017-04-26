@@ -1,0 +1,36 @@
+.roundabout-holder {
+margin:0 auto;
+padding:0;
+width:100%;
+max-width:800px;
+min-height:540px;
+}
+.roundabout-moveable-item {
+height:auto;
+width:100%;
+max-width:320px;
+cursor:pointer;
+border:5px solid #acacac;
+display:block;
+}
+.roundabout-moveable-item img {
+width:100%;
+}
+.roundabout-in-focus {
+cursor:auto;
+}
+#carousel li {
+width:100%;
+max-width:800px;
+box-shadow:0 0 10px #000;
+text-align:center;
+cursor:pointer;
+overflow:hidden;
+}
+#carousel li.roundabout-in-focus:hover span {
+display:block;
+z-index:1;
+}
+#carousel li.roundabout-in-focus{
+cursor:default;
+}

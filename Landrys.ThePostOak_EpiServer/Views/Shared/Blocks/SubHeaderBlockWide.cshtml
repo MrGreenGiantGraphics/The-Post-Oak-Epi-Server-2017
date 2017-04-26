@@ -1,0 +1,10 @@
+﻿@model SubHeaderBlock
+<div class="solid-background">
+    <!-- Title --><hr class="diamond-bar-pattern" />
+    <div class="diamonds-small">
+        <section class="clearfix" @Html.EditAttributes(x => x.HeaderEdit)>
+            @Html.DisplayFor(x => Model.HeaderEdit)
+        </section>
+    </div>
+    <hr class="diamond-bar-pattern" />
+</div>

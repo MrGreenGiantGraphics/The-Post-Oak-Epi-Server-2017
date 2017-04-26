@@ -1,0 +1,58 @@
+﻿@model lightboxBlock
+@using EPiServer.Core
+@using Landrys.ThePostOak_EpiServer.Controllers
+<div class="art-overlay">
+    <div class="art-verbage" @Html.EditAttributes(x => x.HeadContent)>
+        @Html.DisplayFor(x => Model.HeadContent)
+    </div>
+    <section id="lightbox-holder">
+        <a href="@Model.ImageALarge" data-title="Luxury Retail Options" data-lightbox="retail">
+            {
+                <img class="art-image img-circle" alt="@Model.AltA" src="@Url.ContentUrl(Model.ImageALarge)" />
+            }
+            <figure @Html.EditAttributes(x => x.ImageASmall) class="home-image-flex">
+
+                @if (Model.ImageASmall != null)
+            {
+                    <img class="art-image img-circle" alt="@Model.AltA" src="@Url.ContentUrl(Model.ImageASmall)" />
+                }
+            </figure>
+        </a>
+        <a href="@Model.ImageBLarge" data-title="Extended Stay" data-lightbox="retail">
+            <figure @Html.EditAttributes(x => x.ImageBSmall) class="home-image-flex">
+
+                @if (Model.ImageBSmall != null)
+            {
+                    <img class="art-image img-circle" alt="@Model.AltB" src="@Url.ContentUrl(Model.ImageBSmall)" />
+                }
+            </figure>
+        </a>
+        <a href="@Model.ImageCLarge" data-title="Luxury Hotel Rooms" data-lightbox="retail">
+            <figure @Html.EditAttributes(x => x.ImageCSmall) class="home-image-flex">
+
+                @if (Model.ImageCSmall != null)
+            {
+                    <img class="art-image img-circle" alt="@Model.AltC" src="@Url.ContentUrl(Model.ImageCSmall)" />
+                }
+            </figure>
+        </a>
+        <a href="@Model.ImageDLarge" data-title="Luxury Meeting Options" data-lightbox="retail">
+            <figure @Html.EditAttributes(x => x.ImageDSmall) class="home-image-flex">
+
+                @if (Model.ImageDSmall != null)
+            {
+                    <img class="art-image img-circle" alt="@Model.AltD" src="@Url.ContentUrl(Model.ImageDSmall)" />
+                }
+            </figure>
+        </a>
+        <a href="@Model.ImageELarge" data-title="Luxury Hotel Rooms" data-lightbox="retail">
+            <figure @Html.EditAttributes(x => x.ImageESmall) class="home-image-flex">
+
+                @if (Model.ImageESmall != null)
+            {
+                    <img class="art-image img-circle" alt="@Model.AltE" src="@Url.ContentUrl(Model.ImageESmall)" />
+                }
+            </figure>
+        </a>
+    </section>
+    </div>

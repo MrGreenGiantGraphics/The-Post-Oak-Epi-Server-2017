@@ -1,0 +1,16 @@
+// Use this to define how the color of the text will be
+@mixin default-text-color ($tc: $color-black) {
+    color: $tc;
+}
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius(10px);
+}

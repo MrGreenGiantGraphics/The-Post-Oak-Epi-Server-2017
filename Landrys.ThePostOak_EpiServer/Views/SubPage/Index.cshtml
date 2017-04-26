@@ -1,0 +1,9 @@
+﻿@using Landrys.ThePostOak_EpiServer
+@using EPiServer.Framework.Web.Mvc.Html
+@model PageViewModel<Landrys.ThePostOak_EpiServer.Models.Pages.SubPage>
+@{ Layout = "~/Views/Shared/Layouts/_LayoutSub.cshtml"; }
+@Html.PropertyFor(x => x.CurrentPage.ContentAreaHolder, new
+{
+    CssClass = "row equal-height",
+    tag = Global.ContentAreaTags.FullWidth
+})
